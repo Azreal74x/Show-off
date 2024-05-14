@@ -33,10 +33,20 @@ public class GameMan : MonoBehaviour
     public void BackButtonAction()
     {
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Map"));
-        SceneManager.LoadScene("Map", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Map"/*, LoadSceneMode.Additive*/);
+    }
+    public void LoadHouse1()
+    {
+        SceneManager.LoadScene("House1"/*, LoadSceneMode.Additive*/);
+    }public void LoadHouse2()
+    {
+        SceneManager.LoadScene("House2"/*, LoadSceneMode.Additive*/);
+    }public void LoadHouse3()
+    {
+        SceneManager.LoadScene("House3"/*, LoadSceneMode.Additive*/);
     }
 
-    
+
 
 
 }
