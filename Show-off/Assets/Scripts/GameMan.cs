@@ -7,6 +7,7 @@ public class GameMan : MonoBehaviour
 {
     public static GameMan currentInstance;
 
+
     void Awake()
     {
         if (currentInstance != null)

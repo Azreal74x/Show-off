@@ -25,7 +25,7 @@ public class Raycasting : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, rayLenght, layerMask))
             {
-                Debug.Log("clicked "+hit.collider.gameObject.name);
+                Debug.Log("clicked " + hit.collider.gameObject.name);
                 /*switch (hit.collider.name)
                 {
                     case house1name:
@@ -54,7 +54,6 @@ public class Raycasting : MonoBehaviour
                 {
                     GameMan.currentInstance.LoadHouse3();
                 }
-                else Debug.Log("no coresponding house");
             }
         }
     }
