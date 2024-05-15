@@ -30,13 +30,9 @@ public class GoldStoneSpawner : MonoBehaviour
       if (spawn != null) {
         instantiatePrefab = Instantiate(objectsPrefabs[randomObjectPrefab], spawn.transform.position, transform.rotation, transform); // instantiate the random object at random spawnpoint with current parent rotation as a child of what this script is attached to
         spawnTaken[spawn] = true; // mark this spawn point as occupied
-        instantiatePrefab.GetComponent<GoldBehaviour>().SetSpawner(this, spawn); // set the spawner and spawn point in the GoldBehaviour script
+        instantiatePrefab.GetComponent<GoldStoneBehaviour>().SetSpawner(this, spawn); // set the spawner and spawn point in the GoldBehaviour script
         lastSpawnTime = Time.time; // set last spawn time to current time to keep track from this point on again
       }
-
-      /*int randomSpawn = Random.Range(0, spawnPoints.Count); //get random spawnpoint from the spawnpoints list
-      instantiatePrefab = Instantiate(objectsPrefabs[randomObjectPrefab], spawnPoints[randomSpawn].transform.position, transform.rotation, transform); //instantiate the random object at random spawnpoint with current parent rotation as a child of what this script is attached to
-      lastSpawnTime = Time.time; //set last spawn time to current time to keep track from this point on again*/
     }
   }
 
