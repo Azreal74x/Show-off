@@ -464,6 +464,7 @@ GameObject:
   - component: {fileID: 886236006}
   - component: {fileID: 886236010}
   - component: {fileID: 886236011}
+  - component: {fileID: 886236012}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -598,6 +599,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
+--- !u!114 &886236012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886236005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0bab504f8a6abb4aa582d96d0f33bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDelay: 2
+  spawnPoints: []
+  objectsPrefabs: []
+  materials: []
 --- !u!1 &897874725
 GameObject:
   m_ObjectHideFlags: 0
