@@ -1240,6 +1240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 15
+  speed: 2
 --- !u!136 &1725193263
 CapsuleCollider:
   m_ObjectHideFlags: 0
