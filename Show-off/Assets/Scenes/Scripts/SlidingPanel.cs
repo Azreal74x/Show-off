@@ -48,7 +48,7 @@ public class SlidingPanel : MonoBehaviour
                 }
                 else
                 {
-                    //for roght side is the smae but with -
+                    //for right side is the smae but with -
                     actualWidth -= 700 * Time.deltaTime;
                     if (actualWidth <= resultWidth)
                     {

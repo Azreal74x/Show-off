@@ -7,10 +7,12 @@ public class PetMonster : MonoBehaviour
     float firstTime;
     float lastTime;
     float difference;
-    bool startedTimer = false;
+    bool startedPet = false;
 
     bool dragging = false;
     bool over = false;
+
+    [SerializeField] private HappyBar happinessBar;
 
     void Start()
     {
@@ -21,22 +23,38 @@ public class PetMonster : MonoBehaviour
         //Debug.Log("dragging? " + dragging);
         //Debug.Log("over? " + over);
 
-        if ((dragging && over) && !startedTimer) // if you are dragging, over and didn t start timing, starts the timer
+        if ((dragging && over) && !startedPet) // if you are dragging, over and didn t start timing, starts the timer
         {
             firstTime = Time.time;
-            startedTimer = true;
+            startedPet = true;
         }
 
-        if ((!dragging || !over) && startedTimer) // if you stop dragging or ur not over the monster anymore then timer stops
+        if ((!dragging || !over) && startedPet) // if you stop dragging or ur not over the monster anymore then timer stops
         {
             lastTime = Time.time;
             difference = lastTime - firstTime;
 
             // calculates a score based on how much you pet the monster
             //Debug.Log("nice petting! points gained: " + Mathf.CeilToInt( difference / 0.1f));
+            //happinessBar.AddHappyLevel(difference * 100);
 
-            startedTimer = false;
+            startedPet = false;
         }
+
+        if(startedPet)
+        {
+            happinessBar.AddHappyLevel(0.1f);
+        }
+
+
+        /*
+         *  DO NOT ASK WHY SO COMPLICATED 
+         *  WHEN I DID IT LIKE BELOW IT CRASHED THE WHOLE ASS UNITY
+        while (dragging && over)
+        {
+            happinessBar.AddHappyLevel(1);
+
+        }*/
 
 
     }
