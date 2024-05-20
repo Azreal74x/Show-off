@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CandySpawner : MonoBehaviour {
+public class ObjectSpawner : MonoBehaviour {
 
   private GameObject instantiatePrefab = null; //the object that will be created
   private float lastSpawnTime; //variable to keep track of time passed
