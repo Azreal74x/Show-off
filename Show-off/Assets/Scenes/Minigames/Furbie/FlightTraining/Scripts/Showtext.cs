@@ -2,15 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Showtext : MonoBehaviour
 {
-    public TMP_Text text;
+    public GameObject text;
 
     void Start()
     {
-        text.enabled = true;
+        text.SetActive(true);
+        WaitForSec();
 
+    }
+
+    IEnumerator WaitForSec()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("House1");
     }
 
     void Update()
