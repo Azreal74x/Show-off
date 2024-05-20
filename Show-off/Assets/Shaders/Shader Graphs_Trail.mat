@@ -62,5 +62,5 @@ Material:
     - _Color01: {r: 1, g: 0, b: 0, a: 1}
     - _Color02: {r: 0, g: 0.09738016, b: 1, a: 1}
     - _DissolveSpeed: {r: 0.5, g: 0, b: 0, a: 0}
-    - _MainTextSpeed: {r: 0.5, g: 0, b: 0, a: 0}
+    - _MainTextSpeed: {r: 0.3, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
