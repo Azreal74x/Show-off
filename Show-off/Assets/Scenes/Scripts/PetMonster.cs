@@ -18,8 +18,8 @@ public class PetMonster : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("dragging? " + dragging);
-        Debug.Log("over? " + over);
+        //Debug.Log("dragging? " + dragging);
+        //Debug.Log("over? " + over);
 
         if ((dragging && over) && !startedTimer) // if you are dragging, over and didn t start timing, starts the timer
         {
@@ -33,7 +33,7 @@ public class PetMonster : MonoBehaviour
             difference = lastTime - firstTime;
 
             // calculates a score based on how much you pet the monster
-            Debug.Log("nice petting! points gained: " + Mathf.CeilToInt( difference / 0.1f));
+            //Debug.Log("nice petting! points gained: " + Mathf.CeilToInt( difference / 0.1f));
 
             startedTimer = false;
         }
