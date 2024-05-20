@@ -11,7 +11,7 @@ public class HoopBehaviour : MonoBehaviour
 
     public static int score;
 
-    public static int lives = 5;
+    public static int lives = 500;
 
     void Start()
     {
