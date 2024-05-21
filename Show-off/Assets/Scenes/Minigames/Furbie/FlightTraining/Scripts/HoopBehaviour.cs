@@ -49,6 +49,7 @@ public class HoopBehaviour : MonoBehaviour
 
             Debug.Log("GAMEOVER");
             ObjectSpawner spawner = GetComponentInParent<ObjectSpawner>();
+
             spawner.GetComponent<Showtext>().enabled = true;
 
             for (var i = spawner.transform.childCount - 1; i >= 0; i--)

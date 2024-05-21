@@ -23,28 +23,35 @@ public class GameMan : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
 
     public void BackButtonAction()
     {
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Map"));
-        SceneManager.LoadScene("Map"/*, LoadSceneMode.Additive*/);
+        SceneManager.LoadScene("HomeScene"/*, LoadSceneMode.Additive*/);
     }
     public void LoadHouse1()
     {
         SceneManager.LoadScene("House1"/*, LoadSceneMode.Additive*/);
-    }public void LoadHouse2()
+    }
+    public void LoadHouse2()
     {
         SceneManager.LoadScene("House2"/*, LoadSceneMode.Additive*/);
-    }public void LoadHouse3()
+    }
+    public void LoadHouse3()
     {
         SceneManager.LoadScene("House3"/*, LoadSceneMode.Additive*/);
+    }
+
+    public void LoadFurbieGame()
+    {
+        SceneManager.LoadScene("FlightTraining");
     }
 
 
