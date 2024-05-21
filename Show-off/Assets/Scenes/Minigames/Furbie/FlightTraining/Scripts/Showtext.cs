@@ -12,14 +12,18 @@ public class Showtext : MonoBehaviour
     void Start()
     {
         text.SetActive(true);
-        WaitForSec();
+
+        StartCoroutine(WaitForSec());
 
     }
 
     IEnumerator WaitForSec()
     {
-        yield return new WaitForSeconds(2);
+        Debug.Log(" should start coroutine");
+        yield return new WaitForSeconds(4);
+         
         SceneManager.LoadScene("House1");
+        Debug.Log(" should end coroutine");
     }
 
     void Update()
