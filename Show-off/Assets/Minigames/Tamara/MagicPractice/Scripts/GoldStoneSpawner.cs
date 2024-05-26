@@ -13,16 +13,21 @@ public class GoldStoneSpawner : MonoBehaviour
   
   private Dictionary<GameObject, bool> spawnTaken = new Dictionary<GameObject, bool>(); //create dictionary to check if the spawn is empty
 
+  [SerializeField] GameObject player; //reference to Player obj
+  ScoreBehaviour scoreBehaviour; //reference to ScoreBehaviour script
+
   private void Start() {
     lastSpawnTime = Time.time; //set last spawn time to current time to keep track
 
     foreach (var spawn in spawnPoints) { //for every spawn in spawnPoints
       spawnTaken[spawn] = false; //mark them all as false / not taken
     }
+
+    scoreBehaviour = player.GetComponent<ScoreBehaviour>(); //get ScoreBehaviour script from Player obj
   }
 
   private void Update() {
-    if (Time.time - lastSpawnTime >= spawnDelay) { //if time - last spawn time is bigger than time passed, so if this amount of time passed
+    if (Time.time - lastSpawnTime >= spawnDelay && scoreBehaviour.canMove) { //if time - last spawn time is bigger than time passed, so if this amount of time passed and the beam is moving again
       int randomObjectPrefab = Random.Range(0, objectsPrefabs.Count); //get random object from the prefabs list
 
       GameObject spawn = GetEmptySpawn(); 

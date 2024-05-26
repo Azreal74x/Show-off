@@ -52,7 +52,7 @@ public class GoldStoneBehaviour : MonoBehaviour {
         moveToPlayer = true;
       }
 
-      if (collision.gameObject.tag == "Gold" || collision.gameObject.tag == "Stone") { //check if the collision was with a bullet
+      if (collision.gameObject.tag == "Gold" || collision.gameObject.tag == "Stone") { //check if collision was with another piece of gold or stone
         Destroy(gameObject); //destroy the object this script is attached to
       }
 

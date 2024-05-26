@@ -10,36 +10,32 @@ public class BulletSpawner : MonoBehaviour {
   [SerializeField] private Transform bulletParent; //empty parent obj to spawn bullets in
 
   [SerializeField] private int amplitude = 80;
+  [SerializeField] private float beamSpeed = 1f;
 
-  private float lastSpawnTime; //variable to keep track of time passed
   private float aimTimer;
 
- [SerializeField] private float cooldown = 5f; //cooldown until you can shoot again
-  public bool canMove = true;
+  [SerializeField] private float cooldown = 5f; //cooldown until you can shoot again
 
+  [SerializeField] GameObject player; //reference to Player obj
+  ScoreBehaviour scoreBehaviour; //reference to ScoreBehaviour script
 
   private void Start() {
-    lastSpawnTime = Time.time; //set last spawn time to current time to keep track
     aimTimer = 0f;
+
+    scoreBehaviour = player.GetComponent<ScoreBehaviour>();
   }
 
   private void Update() {
-    if (Time.time - lastSpawnTime >= cooldown) { //if time - last spawn time is bigger than time passed, so if this amount of time passed
-      if (Input.GetMouseButtonDown(0)) { //if left mouse click
-        instantiatePrefab = Instantiate(bullet, bulletSpawner.transform.position, transform.rotation, bulletParent); //spawn bullet in the bulletParent obj    
-        canMove = false;
-        lastSpawnTime = Time.time; // set last spawn time to current time to keep track from this point on again
-      }
-      else {
-        canMove = true;
-      }
+    if (Input.GetMouseButtonDown(0) && scoreBehaviour.canMove) { //if left mouse click
+      instantiatePrefab = Instantiate(bullet, bulletSpawner.transform.position, transform.rotation, bulletParent); //spawn bullet in the bulletParent obj    
+      scoreBehaviour.canMove = false;
     }
   }
 
 
   private void FixedUpdate() {
-    if (canMove) {
-      aimTimer += Time.fixedDeltaTime; //increase only when canMove is true
+    if (scoreBehaviour.canMove) {
+      aimTimer += Time.fixedDeltaTime * beamSpeed; //increase aimTimer only when canMove is true and multiply with beamSpeed
       transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Sin(aimTimer) * amplitude); //make beam move left to right
     }
   }
