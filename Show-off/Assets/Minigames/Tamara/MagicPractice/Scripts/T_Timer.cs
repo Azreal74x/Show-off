@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Timer : MonoBehaviour {
+public class T_Timer : MonoBehaviour {
 
   [SerializeField] private float countdown = 60f;
 
@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour {
       countdown -= Time.deltaTime;
     }
     else if(countdown == 0){
-      //SceneManager.LoadScene("HouseTamara"); //name has to be set to actual HouseTamara name
+      //SceneManager.LoadScene("GameEndMenu"); //has to be changed to actual scene name
     }
   }
 

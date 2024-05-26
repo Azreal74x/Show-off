@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoldStoneBehaviour : MonoBehaviour {
+public class T_ObjectBehaviour : MonoBehaviour {
 
-  private GoldStoneSpawner spawner;
+  private T_ObjectSpawner spawner;
   private GameObject spawnPoint;
 
   [SerializeField] private GameObject player;
@@ -31,7 +31,7 @@ public class GoldStoneBehaviour : MonoBehaviour {
     }
   }
 
-  public void SetSpawner(GoldStoneSpawner spawner, GameObject spawnPoint) {
+  public void SetSpawner(T_ObjectSpawner spawner, GameObject spawnPoint) {
     this.spawner = spawner;
     this.spawnPoint = spawnPoint;
   }

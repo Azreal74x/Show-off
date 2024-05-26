@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletSpawner : MonoBehaviour {
+public class T_BulletSpawner : MonoBehaviour {
 
   private GameObject instantiatePrefab = null; //the object that will be created
   [SerializeField] private GameObject bullet; //reference to bullet prefab
@@ -14,15 +14,13 @@ public class BulletSpawner : MonoBehaviour {
 
   private float aimTimer;
 
-  [SerializeField] private float cooldown = 5f; //cooldown until you can shoot again
-
   [SerializeField] GameObject player; //reference to Player obj
-  ScoreBehaviour scoreBehaviour; //reference to ScoreBehaviour script
+  T_Score scoreBehaviour; //reference to ScoreBehaviour script
 
   private void Start() {
     aimTimer = 0f;
 
-    scoreBehaviour = player.GetComponent<ScoreBehaviour>();
+    scoreBehaviour = player.GetComponent<T_Score>();
   }
 
   private void Update() {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletBehaviour : MonoBehaviour {
+public class T_BulletBehaviour : MonoBehaviour {
 
   [SerializeField] private float bulletSpeed = 2f;
 
@@ -10,12 +10,12 @@ public class BulletBehaviour : MonoBehaviour {
   [SerializeField] private float lifetime = 5f; //the delay between spawning of objects
 
   GameObject player; //reference to Player obj
-  ScoreBehaviour scoreBehaviour; //reference to ScoreBehaviour script
+  T_Score scoreBehaviour; //reference to ScoreBehaviour script
 
   private void Start() {
     lastSpawnTime = Time.time; //set last spawn time to current time to keep track
     player = GameObject.FindWithTag("Player"); //find player by its tag
-    scoreBehaviour = player.GetComponent<ScoreBehaviour>(); 
+    scoreBehaviour = player.GetComponent<T_Score>(); 
   }
 
   private void Update() {

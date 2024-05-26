@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JemieMovementMouse : MonoBehaviour {
+public class J_MouseMovement : MonoBehaviour {
   
   [SerializeField] private Camera mainCamera; //main camera reference
 

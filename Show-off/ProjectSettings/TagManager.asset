@@ -8,6 +8,8 @@ TagManager:
   - Gold
   - Stone
   - Kill
+  - BadCandy
+  - GoodCandy
   layers:
   - Default
   - TransparentFX
