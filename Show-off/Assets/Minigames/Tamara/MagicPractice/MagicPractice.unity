@@ -516,7 +516,7 @@ MonoBehaviour:
   bulletSpawner: {fileID: 53528723}
   bulletParent: {fileID: 1166726773}
   amplitude: 80
-  cooldown: 2
+  beamSpeed: 1
   player: {fileID: 1856423585}
 --- !u!1 &188308860
 GameObject:
@@ -1958,7 +1958,7 @@ Transform:
   m_GameObject: {fileID: 1164748149}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.29, z: 0}
+  m_LocalPosition: {x: 0, y: 4.22, z: 1.3}
   m_LocalScale: {x: 0.20000002, y: 9, z: 0.20000002}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1984,7 +1984,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 64f3c2937cbc0224b82a970fa03966ba, type: 2}
+  - {fileID: 2100000, guid: 9a389c75d59b1e94d88e6266917b4e87, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
