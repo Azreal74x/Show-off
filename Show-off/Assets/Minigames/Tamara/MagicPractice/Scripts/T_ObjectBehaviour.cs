@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoldStoneBehaviour : MonoBehaviour {
+public class T_ObjectBehaviour : MonoBehaviour {
 
-  private GoldStoneSpawner spawner;
+  private T_ObjectSpawner spawner;
   private GameObject spawnPoint;
 
   [SerializeField] private GameObject player;
@@ -31,7 +31,7 @@ public class GoldStoneBehaviour : MonoBehaviour {
     }
   }
 
-  public void SetSpawner(GoldStoneSpawner spawner, GameObject spawnPoint) {
+  public void SetSpawner(T_ObjectSpawner spawner, GameObject spawnPoint) {
     this.spawner = spawner;
     this.spawnPoint = spawnPoint;
   }
@@ -52,7 +52,7 @@ public class GoldStoneBehaviour : MonoBehaviour {
         moveToPlayer = true;
       }
 
-      if (collision.gameObject.tag == "Gold" || collision.gameObject.tag == "Stone") { //check if the collision was with a bullet
+      if (collision.gameObject.tag == "Gold" || collision.gameObject.tag == "Stone") { //check if collision was with another piece of gold or stone
         Destroy(gameObject); //destroy the object this script is attached to
       }
 
