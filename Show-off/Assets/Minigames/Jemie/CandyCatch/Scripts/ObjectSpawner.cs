@@ -7,6 +7,9 @@ public class ObjectSpawner : MonoBehaviour
 
     private GameObject instantiatePrefab = null; //the object that will be created
     private float lastSpawnTime; //variable to keep track of time passed
+
+    private int count = 0;
+
     [SerializeField] private float spawnDelay = 2f; //the delay between spawning of objects
 
     [SerializeField] private List<GameObject> spawnPoints = new List<GameObject>(); //create list for all possible spawnpoints
@@ -28,6 +31,14 @@ public class ObjectSpawner : MonoBehaviour
             instantiatePrefab = Instantiate(objectsPrefabs[randomObjectPrefab], spawnPoints[randomSpawnPoint].transform.position, transform.rotation, transform); //instantiate the random object at random spawnpoint with current parent rotation as a child of what this script is attached to
             instantiatePrefab.GetComponent<Renderer>().material = materials[randomMaterial]; //assign material to the newly created object
             lastSpawnTime = Time.time; //set last spawn time to current time to keep track from this point on again
+
+            count++;
         }
+        if (count == 3 && spawnDelay > 1f)
+        {
+            spawnDelay -= 0.2f;
+            count = 0;
+        }
+
     }
 }
