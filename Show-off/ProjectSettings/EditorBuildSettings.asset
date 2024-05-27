@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Tomass/ScenesTomass/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/_Archive/Map/Map.unity
-    guid: f15c3aff67b1d7241910af63dd94ab7a
+    path: Assets/Minigames/Furbie/FlightTraining/FlightTraining.unity
+    guid: 92742f450522984459d3308983fd3ff0
   - enabled: 1
     path: Assets/Houses/HouseFurbie/HouseFurbie.unity
     guid: 8c8139fce6f9b8446b913f2249af94ea
