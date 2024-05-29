@@ -1749,7 +1749,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"8406095bab6c3f545a324b4b7cf88ada","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"4d8e81eff584b1b4e97d0700ec0cab91","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: _Texture2D
@@ -1783,7 +1783,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.319
+      m_SerializableObject: 0.047
     m_Space: 2147483647
   m_Property:
     name: _Clip
@@ -1987,7 +1987,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"30e31a2aa0c66044c9e3e08bd33432cf","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"1a6ae23ea14954449b7a02356fbf2091","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: _Texture2D
@@ -2021,7 +2021,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0
+      m_SerializableObject: 0.241
     m_Space: 2147483647
   m_Property:
     name: _Clip
@@ -2134,7 +2134,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.016212157905101777,"g":0.037247754633426669,"b":0.7811320424079895,"a":1.0},"time":0.0},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.19882506132125855},{"color":{"r":0.0,"g":0.47204580903053286,"b":15.077627182006836,"a":1.0},"time":0.6500037908554077},{"color":{"r":0.5,"g":0.5,"b":0.5,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":1.0,"time":0.07176318019628525},{"alpha":0.9868192076683044,"time":0.1423514187335968},{"alpha":0.0,"time":0.19882506132125855},{"alpha":0.0,"time":0.5564659833908081},{"alpha":1.0,"time":0.6500037908554077},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.3517584502696991,"g":0.8081720471382141,"b":16.948379516601564,"a":1.0},"time":0.0},{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.19882506132125855},{"color":{"r":0.0,"g":0.47204580903053286,"b":15.077627182006836,"a":1.0},"time":0.6500037908554077},{"color":{"r":0.5,"g":0.5,"b":0.5,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":1.0,"time":0.07176318019628525},{"alpha":0.9868192076683044,"time":0.1423514187335968},{"alpha":0.0,"time":0.19882506132125855},{"alpha":0.0,"time":0.5564659833908081},{"alpha":1.0,"time":0.6500037908554077},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: gradient
