@@ -10,6 +10,7 @@ TagManager:
   - Kill
   - BadCandy
   - GoodCandy
+  - Hoop
   layers:
   - Default
   - TransparentFX

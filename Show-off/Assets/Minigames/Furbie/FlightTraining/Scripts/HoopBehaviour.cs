@@ -3,46 +3,53 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UIElements;
 
 public class HoopBehaviour : MonoBehaviour
 {
-    [SerializeField] private float speed;
     private Vector3 newPos;
+
+    public static float speed = 0.2f;
+
+    public float shownr;
 
     public static int score;
 
     public static int lives = 5;
 
+    [SerializeField] private bool hit = false;
+
+    //  timer
+    private float lastTime;
+
+    static bool debugging = true;
+
     void Start()
     {
-        newPos.z = speed;
-        //Debug.Log(score);
+
+
+        lastTime = Time.time;
     }
 
     void Update()
     {
-        transform.position += newPos;
 
+        if (Time.time - lastTime > 3f && speed < 1)
+        {
+            speed += 0.01f;
+            lastTime = Time.time;
+        }
+        shownr = speed;
+
+        newPos.z = speed;
+        transform.position -= newPos;
+
+
+        CheckLives();
 
     }
-
-    private void OnCollisionEnter(Collision collision)
+    private void CheckLives()
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            Debug.Log("collision with player");
-
-            score++;
-            Debug.Log(score);
-
-        }
-        else if (collision.gameObject.name == "Cube")
-        {
-            lives--;
-            Debug.Log("missed one! lives = " + lives);
-        }
-
-        Debug.Log("collision with " + collision.gameObject.name);
         if (lives == 0)
         {
             lives = -1;
@@ -59,7 +66,41 @@ public class HoopBehaviour : MonoBehaviour
             spawner.enabled = false;
 
         }
-
-        Destroy(gameObject);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.name == "Cube")
+        {
+
+            if (hit == false && debugging == false)
+            {
+                Debug.Log("missed one! lives = " + lives);
+                lives--;
+            }
+
+
+            Destroy(gameObject);
+        }
+
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("collision with player");
+
+            hit = true;
+            score++;
+            Debug.Log("you got it! score: " + score);
+
+        }
+        
+    }
+
+
+
+
 }
