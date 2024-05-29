@@ -30,10 +30,10 @@ public class T_BulletBehaviour : MonoBehaviour {
 
   private void OnCollisionEnter(Collision collision) { //method for collision checking
     if (collision != null) { //if we collided with anything (we = the object this script is attached to)
-      if (collision.gameObject.tag == "Gold") { //check if the collision was with a gold by checking the tag
+      if (collision.gameObject.tag == "Gold") { //startDelay if the collision was with a gold by checking the tag
         //Debug.Log("Collided with gold");
       }
-      else if (collision.gameObject.tag == "Stone") { //check if the collision was with a stone by checking the tag
+      else if (collision.gameObject.tag == "Stone") { //startDelay if the collision was with a stone by checking the tag
         //Debug.Log("Collided with gold");
       }
       else if(collision.gameObject.tag == "Kill") {
