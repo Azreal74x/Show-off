@@ -53,7 +53,7 @@ public class MouseMovement : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(direction);
 
         targetRotation.x = Mathf.Clamp(targetRotation.x, -0.1f, 0.1f);
-        targetRotation.y = Mathf.Clamp(targetRotation.y, -0.1f, 0.1f);
+        targetRotation.y = Mathf.Clamp(targetRotation.y, -0.2f, 0.2f);
 
         //Debug.Log("targetRotation = " + targetRotation);
 
@@ -63,6 +63,20 @@ public class MouseMovement : MonoBehaviour
 
     }
 
-  
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Hoop")
+        {
+            this.gameObject.GetComponent<Rigidbody>().useGravity= true;
+
+            this.gameObject.GetComponent<MouseMovement>().enabled = false;
+            
+        }
+
+        
+    }
+
+
+
 }
 

@@ -34,7 +34,7 @@ public class ObjectSpawner : MonoBehaviour
 
             count++;
         }
-        if (count == 3 && spawnDelay > 1f)
+        if (count == 5 && spawnDelay >= 0.4f)
         {
             spawnDelay -= 0.2f;
             count = 0;
