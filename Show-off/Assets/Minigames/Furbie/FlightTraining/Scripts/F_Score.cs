@@ -10,7 +10,6 @@ public class F_Score : MonoBehaviour
     [SerializeField] private FloatSO highScoreSO;
     public float score = 0;
 
-    public bool canMove = true; //bool to keep track of pulling activity
 
     private void Start()
     {

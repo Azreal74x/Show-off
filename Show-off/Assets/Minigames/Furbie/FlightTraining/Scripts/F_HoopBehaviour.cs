@@ -9,7 +9,7 @@ public class F_HoopBehaviour : MonoBehaviour
 {
     private Vector3 newPos;
 
-    public float speed = 0.2f;
+    public float speed;
 
     public float shownr;
 
@@ -46,7 +46,7 @@ public class F_HoopBehaviour : MonoBehaviour
             lives = -1;
 
             Debug.Log("GAMEOVER");
-            ObjectSpawner spawner = GetComponentInParent<ObjectSpawner>();
+            F_ObjectSpawner spawner = GetComponentInParent<F_ObjectSpawner>();
 
             spawner.GetComponent<F_Showtext>().enabled = true;
 

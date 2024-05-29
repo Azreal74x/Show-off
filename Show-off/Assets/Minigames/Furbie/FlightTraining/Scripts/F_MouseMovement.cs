@@ -5,26 +5,6 @@ using UnityEngine;
 public class F_MouseMovement : MonoBehaviour
 {
 
-   // [SerializeField] private Rigidbody rb;
-    /*Vector3 newPos;
-
-    public float offset;
-
-    void Start()
-    {
-    }
-
-    void Update()
-    {
-        newPos = Input.mousePosition;
-        newPos.z = offset;
-        transform.position = Camera.main.ScreenToWorldPoint(newPos);
-        //Debug.Log("mouse x pos = " + newPos.x);
-        //Debug.Log("mouse y pos = " + newPos.y);
-
-
-    }
-    */
 
     Vector3 worldMousePos;
     public float offset;
@@ -63,19 +43,19 @@ public class F_MouseMovement : MonoBehaviour
 
     }
 
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Hoop")
         {
-            this.gameObject.GetComponent<Rigidbody>().useGravity= true;
+            this.gameObject.GetComponent<Rigidbody>().useGravity = true;
 
             this.gameObject.GetComponent<F_MouseMovement>().enabled = false;
-            
+
         }
 
-        
-    }
 
+    }
 
 
 }
