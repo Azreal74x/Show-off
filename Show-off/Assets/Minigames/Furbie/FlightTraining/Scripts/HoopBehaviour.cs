@@ -17,6 +17,8 @@ public class HoopBehaviour : MonoBehaviour
 
     public static int lives = 5;
 
+    [SerializeField] private bool hit = false;
+
     //  timer
     private float lastTime;
 
@@ -32,15 +34,16 @@ public class HoopBehaviour : MonoBehaviour
     void Update()
     {
 
-        if (Time.time - lastTime > 3f)
+        if (Time.time - lastTime > 3f && speed < 1)
         {
             speed += 0.01f;
             lastTime = Time.time;
         }
+        shownr = speed;
+
         newPos.z = speed;
         transform.position -= newPos;
 
-        shownr = speed;
 
         CheckLives();
 
@@ -65,26 +68,39 @@ public class HoopBehaviour : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.name == "Cube")
+        {
+
+            if (hit == false && debugging == false)
+            {
+                Debug.Log("missed one! lives = " + lives);
+                lives--;
+            }
+
+
+            Destroy(gameObject);
+        }
+
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
         {
             Debug.Log("collision with player");
 
+            hit = true;
             score++;
-            Debug.Log(score);
+            Debug.Log("you got it! score: " + score);
 
         }
-        else if (debugging != true && collision.gameObject.name == "Cube")
-        {
-            lives--;
-            Debug.Log("missed one! lives = " + lives);
-        }
-
-        Debug.Log("collision with " + collision.gameObject.name);
-
-
-
-        Destroy(gameObject);
+        
     }
+
+
+
+
 }
