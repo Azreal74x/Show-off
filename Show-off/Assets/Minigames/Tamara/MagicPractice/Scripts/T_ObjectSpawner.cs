@@ -11,7 +11,7 @@ public class T_ObjectSpawner : MonoBehaviour
   [SerializeField] private List<GameObject> spawnPoints = new List<GameObject>(); //create list for all possible spawnpoints
   [SerializeField] private List<GameObject> objectsPrefabs = new List<GameObject>(); //create list for the different object prefabs
   
-  private Dictionary<GameObject, bool> spawnTaken = new Dictionary<GameObject, bool>(); //create dictionary to check if the spawn is empty
+  private Dictionary<GameObject, bool> spawnTaken = new Dictionary<GameObject, bool>(); //create dictionary to startDelay if the spawn is empty
 
   [SerializeField] GameObject player; //reference to Player obj
   T_Score scoreBehaviour; //reference to ScoreBehaviour script

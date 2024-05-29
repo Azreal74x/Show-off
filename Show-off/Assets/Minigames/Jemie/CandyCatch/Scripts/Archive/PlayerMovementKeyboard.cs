@@ -15,10 +15,10 @@ public class PlayerMovementKeyboard : MonoBehaviour {
 
   void Update() {
     //keyboard movement controls
-    if (Input.GetKey(KeyCode.A)) { //check if A is pressed
+    if (Input.GetKey(KeyCode.A)) { //startDelay if A is pressed
       moveLeft = true; //set flag to true
     }
-    else if (Input.GetKey(KeyCode.D)) { //check if D is pressed
+    else if (Input.GetKey(KeyCode.D)) { //startDelay if D is pressed
       moveRight = true; //set flag to true
     }
   }
