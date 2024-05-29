@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseMovement : MonoBehaviour
+public class F_MouseMovement : MonoBehaviour
 {
 
    // [SerializeField] private Rigidbody rb;
@@ -69,7 +69,7 @@ public class MouseMovement : MonoBehaviour
         {
             this.gameObject.GetComponent<Rigidbody>().useGravity= true;
 
-            this.gameObject.GetComponent<MouseMovement>().enabled = false;
+            this.gameObject.GetComponent<F_MouseMovement>().enabled = false;
             
         }
 

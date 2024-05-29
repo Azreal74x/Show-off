@@ -5,11 +5,11 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UIElements;
 
-public class HoopBehaviour : MonoBehaviour
+public class F_HoopBehaviour : MonoBehaviour
 {
     private Vector3 newPos;
 
-    public static float speed = 0.2f;
+    public float speed = 0.2f;
 
     public float shownr;
 
@@ -33,21 +33,12 @@ public class HoopBehaviour : MonoBehaviour
 
     void Update()
     {
-
-        if (Time.time - lastTime > 3f && speed < 1)
-        {
-            speed += 0.01f;
-            lastTime = Time.time;
-        }
-        shownr = speed;
-
         newPos.z = speed;
         transform.position -= newPos;
 
-
         CheckLives();
-
     }
+
     private void CheckLives()
     {
         if (lives == 0)
@@ -57,7 +48,7 @@ public class HoopBehaviour : MonoBehaviour
             Debug.Log("GAMEOVER");
             ObjectSpawner spawner = GetComponentInParent<ObjectSpawner>();
 
-            spawner.GetComponent<Showtext>().enabled = true;
+            spawner.GetComponent<F_Showtext>().enabled = true;
 
             for (var i = spawner.transform.childCount - 1; i >= 0; i--)
             {
@@ -93,11 +84,9 @@ public class HoopBehaviour : MonoBehaviour
             Debug.Log("collision with player");
 
             hit = true;
-            score++;
-            Debug.Log("you got it! score: " + score);
 
         }
-        
+
     }
 
 
