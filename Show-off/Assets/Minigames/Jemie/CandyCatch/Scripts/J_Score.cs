@@ -24,7 +24,7 @@ public class Score : MonoBehaviour {
 
   private void OnCollisionEnter(Collision collision) { //method for collision checking
     if (collision != null) { //if we collided with anything (we = the object this script is attached to)
-      if (collision.gameObject.tag == "GoodCandy") { //check if the collision was with a good candy by checking the tag
+      if (collision.gameObject.tag == "GoodCandy") { //startDelay if the collision was with a good candy by checking the tag
         score += 1; //update score
         scoreText.text = score.ToString(); //update score text
 

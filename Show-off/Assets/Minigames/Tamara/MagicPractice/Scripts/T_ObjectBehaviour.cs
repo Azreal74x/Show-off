@@ -43,16 +43,16 @@ public class T_ObjectBehaviour : MonoBehaviour {
         spawner.EmptySpawn(spawnPoint);
       }
 
-      if (collision.gameObject.tag == "Player") { //check if the collision was with the player by checking the tag
+      if (collision.gameObject.tag == "Player") { //startDelay if the collision was with the player by checking the tag
         //Debug.Log("Collided with player"); 
         Destroy(gameObject); //destroy the object this script is attached to
       }
 
-      if (collision.gameObject.tag == "Bullet") { //check if the collision was with a bullet
+      if (collision.gameObject.tag == "Bullet") { //startDelay if the collision was with a bullet
         moveToPlayer = true;
       }
 
-      if (collision.gameObject.tag == "Gold" || collision.gameObject.tag == "Stone") { //check if collision was with another piece of gold or stone
+      if (collision.gameObject.tag == "Gold" || collision.gameObject.tag == "Stone") { //startDelay if collision was with another piece of gold or stone
         Destroy(gameObject); //destroy the object this script is attached to
       }
 
