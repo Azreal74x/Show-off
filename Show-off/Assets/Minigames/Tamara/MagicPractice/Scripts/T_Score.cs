@@ -6,9 +6,7 @@ using UnityEngine;
 public class T_Score : MonoBehaviour {
 
   [SerializeField] TMP_Text scoreText;
-  [SerializeField] private FloatSO highScoreSO;
-  private float score;
-
+  public float score;
   public bool canMove = true; //bool to keep track of pulling activity
 
   private void Start() {
@@ -25,10 +23,6 @@ public class T_Score : MonoBehaviour {
         score += 1; //update score
         scoreText.text = score.ToString(); //update score text
         
-        if (score > highScoreSO.Value) { //if current score is higher than high score
-          highScoreSO.Value = score; //set high score to current score
-        }
-
         canMove = true;
       }
       else if (collision.gameObject.tag == "Stone") { //startDelay if the collision was with a stone by checking the tag

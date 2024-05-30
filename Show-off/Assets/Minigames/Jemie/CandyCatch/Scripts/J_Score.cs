@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class J_Score : MonoBehaviour {
 
   [SerializeField] TMP_Text scoreText;
-  [SerializeField] private FloatSO highScoreSO;
+  [SerializeField] private ScoreSO scoreKeeperSO;
   private float score;
   public float lostCandy = 0;
 
@@ -20,9 +20,15 @@ public class J_Score : MonoBehaviour {
   }
 
   private void Update() {
-    if(lostCandy >= 5) {
+    if(lostCandy >= 5) { //game end
       J_IsHappy.Value = true;
       houseJemieButton.SetActive(true);
+
+      if (score > scoreKeeperSO.HighScoreValue) { //if current score is higher than high score
+        scoreKeeperSO.HighScoreValue = score; //set high score to current score
+      }
+
+      scoreKeeperSO.CurrentScoreValue = score;
     }
   }
 
@@ -31,10 +37,6 @@ public class J_Score : MonoBehaviour {
       if (collision.gameObject.tag == "GoodCandy") { //startDelay if the collision was with a good candy by checking the tag
         score += 1; //update score
         scoreText.text = score.ToString(); //update score text
-
-        if (score > highScoreSO.Value) { //if current score is higher than high score
-          highScoreSO.Value = score; //set high score to current score
-        }
       }
       if (collision.gameObject.tag == "BadCandy") {
         lostCandy += 1;

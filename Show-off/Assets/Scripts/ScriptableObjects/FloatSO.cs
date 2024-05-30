@@ -9,7 +9,6 @@ public class FloatSO : ScriptableObject
 {
 
     [SerializeField] private float _value;
-    [SerializeField] private float _min;
 
     public float Value
     {
