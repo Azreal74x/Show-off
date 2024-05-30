@@ -33,28 +33,7 @@ public class F_ObjectSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (start)
-        {
-            int randomObjectPrefab = Random.Range(0, objectsPrefabs.Count); //get random object from the prefabs list
-            int randomSpawnPoint = Random.Range(0, spawnPoints.Count); //get random spawnpoint from the spawnpoints list
-            int randomMaterial = Random.Range(0, materials.Count); //get random material from the materials list
-
-            //instantiate the random object at random spawnpoint with current parent rotation as a child of what this script is attached to
-            instantiatePrefab = Instantiate(objectsPrefabs[randomObjectPrefab], spawnPoints[randomSpawnPoint].transform.position, transform.rotation, transform);
-            //assign material to the newly created object
-            instantiatePrefab.GetComponent<Renderer>().material = materials[randomMaterial];
-            //assign the speed too
-            instantiatePrefab.GetComponent<F_HoopBehaviour>().speed = hoopSpeed;
-
-
-            //set last spawn time to current time to keep track from this point on again
-            lastSpawnTime = Time.time;
-
-            hoopSpeed += hoopSpeedIncrease;
-
-            count++;
-            start = false;
-        }
+        
         if (Time.time - lastSpawnTime >= spawnDelay)
         { //if time - last spawn time is bigger than time passed, so if this amount of time passed
             int randomObjectPrefab = Random.Range(0, objectsPrefabs.Count); //get random object from the prefabs list
