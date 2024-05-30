@@ -2143,9 +2143,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1138271150}
+  - component: {fileID: 1138271153}
   - component: {fileID: 1138271149}
   - component: {fileID: 1138271148}
-  - component: {fileID: 1138271153}
   - component: {fileID: 1138271152}
   - component: {fileID: 1138271147}
   - component: {fileID: 1138271151}
@@ -2297,7 +2297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 391059060}
-  highScoreSO: {fileID: 11400000, guid: 8318bd4a4c3fedc479ba8260f2edf364, type: 2}
+  scoreKeeperSO: {fileID: 11400000, guid: 662f7dfdfb42d7e458dd3c886e20a0c7, type: 2}
   lostCandy: 0
   J_IsHappy: {fileID: 11400000, guid: 03a8a7a21b0c7ec4db94009764ddc525, type: 2}
   houseJemieButton: {fileID: 988576943}

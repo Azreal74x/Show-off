@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class Showtext : MonoBehaviour
+public class F_Showtext : MonoBehaviour
 {
     public GameObject text;
 

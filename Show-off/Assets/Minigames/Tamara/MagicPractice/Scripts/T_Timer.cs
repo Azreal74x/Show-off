@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class T_Timer : MonoBehaviour {
 
@@ -13,8 +14,12 @@ public class T_Timer : MonoBehaviour {
 
   [SerializeField] private GameObject houseTamaraButton;
 
-  private void Start() {
+  [SerializeField] private ScoreSO scoreKeeperSO;
+  private T_Score T_Score;
 
+
+  private void Start() {
+    T_Score = gameObject.GetComponent<T_Score>();
   }
 
   private void Update() {
@@ -23,10 +28,16 @@ public class T_Timer : MonoBehaviour {
     if(countdown > 0){
       countdown -= Time.deltaTime;
     }
-    else if(countdown <= 0){
+    else if(countdown <= 0){ //if game end / timer end
       countdown = 0;
       T_isHappy.Value = true;
       houseTamaraButton.SetActive(true);
+
+      if (T_Score.score > scoreKeeperSO.HighScoreValue) { //if current score is higher than high score
+        scoreKeeperSO.HighScoreValue = T_Score.score; //set high score to current score
+      }
+
+      scoreKeeperSO.CurrentScoreValue = T_Score.score; //save current score
     }
   }
 

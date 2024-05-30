@@ -8,9 +8,11 @@ public class Raycasting : MonoBehaviour
     public float rayLenght;
     public LayerMask layerMask;
 
-    public string house1name;
-    public string house2name;
-    public string house3name;
+    public string F_house;
+    public string T_house;
+    public string J_house;
+
+    ButtonScripts buttons;
 
 
     void Start()
@@ -26,33 +28,19 @@ public class Raycasting : MonoBehaviour
             if (Physics.Raycast(ray, out hit, rayLenght, layerMask))
             {
                 Debug.Log("clicked " + hit.collider.gameObject.name);
-                /*switch (hit.collider.name)
-                {
-                    case house1name:
-                        GameMan.currentInstance.LoadHouse1();
-                        break;
-                    case house2name:
-                        GameMan.currentInstance.LoadHouse2();
-                        break;
-                    case house3name:
-                        GameMan.currentInstance.LoadHouse3();
-                        break;
-                    default:
-                        Debug.Log("no coresponding house");
-                        break;
-                }*/
+                
 
-                if (hit.collider.gameObject.name == house1name)
+                if (hit.collider.gameObject.name == F_house)
                 {
-                    GameMan.currentInstance.LoadHouse1();
+                    buttons.F_LoadHouse();
                 }
-                else if (hit.collider.gameObject.name == house2name)
+                else if (hit.collider.gameObject.name == T_house)
                 {
-                    GameMan.currentInstance.LoadHouse2();
+                    buttons.T_LoadHouse();
                 }
-                else if (hit.collider.gameObject.name == house3name)
+                else if (hit.collider.gameObject.name == J_house)
                 {
-                    GameMan.currentInstance.LoadHouse3();
+                    buttons.J_LoadHouse();
                 }
             }
         }
