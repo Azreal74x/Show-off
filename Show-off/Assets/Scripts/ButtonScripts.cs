@@ -7,15 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScripts : MonoBehaviour
 {
+    [SerializeField] private string houseScene;
+
     [SerializeField] private string F_gameName;
     [SerializeField] private string J_gameName;
     [SerializeField] private string T_gameName;
-    
+
     [SerializeField] private string F_roomName;
     [SerializeField] private string J_roomName;
     [SerializeField] private string T_roomName;
 
-
+    [SerializeField] private string F_gameover;
+    [SerializeField] private string J_gameover;
+    [SerializeField] private string T_gameover;
 
 
     void Start()
@@ -26,76 +30,104 @@ public class ButtonScripts : MonoBehaviour
     {
     }
 
-    public void BackToHouses()
+    public void LoadMainHouseScene() 
     {
-        SceneManager.LoadScene("HomeScene");
+        SceneManager.LoadScene(houseScene);
     }
 
-    public void Replay()
+    //specifc methods for each game
+    public void F_LoadGame()
     {
-        switch (SceneManager.GetActiveScene().name)
-        {
-            case "F_GameOver" :
-                SceneManager.LoadScene(F_gameName);
-                break;
-
-            case "J_GameOver":
-                SceneManager.LoadScene(J_gameName);
-                break;
-
-            case "T_GameOver":
-                SceneManager.LoadScene(T_gameName);
-                break;
-
-            default:
-                Debug.Log("Invalid Reload");
-                break;
-        }
-
+        SceneManager.LoadScene(F_gameName);
     }
-    public void BackToRoom()
+    public void T_LoadGame()
     {
-        switch (SceneManager.GetActiveScene().name)
-        {
-            case "F_GameOver":
-                SceneManager.LoadScene(F_roomName);
-                break;
-
-            case "J_GameOver":
-                SceneManager.LoadScene(J_roomName);
-                break;
-
-            case "T_GameOver":
-                SceneManager.LoadScene(T_roomName);
-                break;
-
-            default:
-                Debug.Log("Invalid Back");
-                break;
-        }
-
+        SceneManager.LoadScene(T_gameName);
+    }
+    public void J_LoadGame()
+    {
+        SceneManager.LoadScene(J_gameName);
     }
 
-   
+    //specific method for each house click
     public void F_LoadHouse()
     {
-        SceneManager.LoadScene("HouseFurbie"/*, LoadSceneMode.Additive*/);
+        SceneManager.LoadScene("HouseFurbie");
     }
     public void T_LoadHouse()
     {
-        SceneManager.LoadScene("HouseTamara"/*, LoadSceneMode.Additive*/);
+        SceneManager.LoadScene("HouseTamara");
     }
     public void J_LoadHouse()
     {
-        SceneManager.LoadScene("HouseJemie"/*, LoadSceneMode.Additive*/);
+        SceneManager.LoadScene("HouseJemie");
     }
 
-    public void LoadFurbieGame()
+    //depending in what scene u are, it goes to the coresponding next scene
+    public void Replay()
     {
-        SceneManager.LoadScene("FlightTraining");
+        if(SceneManager.GetActiveScene().name == F_gameover)
+        {
+                SceneManager.LoadScene(F_gameName);
+        }else
+
+        if (SceneManager.GetActiveScene().name == J_gameover)
+        {
+            SceneManager.LoadScene(J_gameName);
+        }else
+
+        if (SceneManager.GetActiveScene().name == T_gameover)
+        {
+            SceneManager.LoadScene(T_gameName);
+        }
+
     }
 
 
+    public void BackToRoom()
+    {
+        if(SceneManager.GetActiveScene().name == F_gameover)
+        {
+                SceneManager.LoadScene(F_roomName);
+        }else
+
+        if (SceneManager.GetActiveScene().name == J_gameover)
+        {
+            SceneManager.LoadScene(J_roomName);
+        }
+        else
+
+        if (SceneManager.GetActiveScene().name == T_gameover)
+        {
+            SceneManager.LoadScene(T_roomName);
+        }
+        
+    }
+
+
+
+    public void GameOver()
+    {
+        if (SceneManager.GetActiveScene().name == F_gameName)
+        {
+            SceneManager.LoadScene(F_gameover);
+        }
+        else
+
+        if (SceneManager.GetActiveScene().name == J_gameName)
+        {
+            SceneManager.LoadScene(J_gameover);
+        }
+        else
+
+        if (SceneManager.GetActiveScene().name == T_gameName)
+        {
+            SceneManager.LoadScene(T_gameover);
+        }
+        
+    }
+
+    
 
 
 

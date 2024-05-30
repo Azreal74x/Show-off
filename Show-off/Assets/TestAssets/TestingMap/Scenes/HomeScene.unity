@@ -875,9 +875,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
-  house1name: PrototypeHouseFurby
-  house2name: PrototypeHouseGirl
-  house3name: PrototypeHouseJester
+  F_house: PrototypeHouseFurby
+  T_house: PrototypeHouseGirl
+  J_house: PrototypeHouseJester
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0

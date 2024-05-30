@@ -15,7 +15,7 @@ public class F_HoopBehaviour : MonoBehaviour
 
     public static int score;
 
-    public static int lives = 5;
+    //public static int lives = 5;
 
     [SerializeField] private bool hit = false;
 
@@ -36,10 +36,10 @@ public class F_HoopBehaviour : MonoBehaviour
         newPos.z = speed;
         transform.position -= newPos;
 
-        CheckLives();
+        //CheckLives();
     }
 
-    private void CheckLives()
+    /*private void CheckLives()
     {
         if (lives == 0)
         {
@@ -57,7 +57,7 @@ public class F_HoopBehaviour : MonoBehaviour
             spawner.enabled = false;
 
         }
-    }
+    }*/
 
     private void OnCollisionEnter(Collision other)
     {
@@ -66,8 +66,7 @@ public class F_HoopBehaviour : MonoBehaviour
 
             if (hit == false && debugging == false)
             {
-                Debug.Log("missed one! lives = " + lives);
-                lives--;
+                other.gameObject.GetComponent<F_Lives>().lives--;
             }
 
 
