@@ -2919,9 +2919,10 @@ MonoBehaviour:
   - {fileID: 948841234}
   - {fileID: 240283249}
   objectsPrefabs:
-  - {fileID: 3413092823465095551, guid: 7dca9a3be2b30bd4c99afc28769ee8f1, type: 3}
-  - {fileID: 2965409654020342387, guid: 9cb8be85e5386b440a7d3c38a2e28a1b, type: 3}
-  - {fileID: 4080812964106547491, guid: 5fa07e2116d74494e91d5f0739912459, type: 3}
+  - {fileID: 5455412314660098504, guid: ff063d38ee9f7f84396ecaef8db9f46c, type: 3}
+  - {fileID: 1163115406408577041, guid: e1e282b8bb260d24c8a789148ef46064, type: 3}
+  - {fileID: 6712431710584675378, guid: fa0a07a67cdd9bf40ae746ed75ee6ad9, type: 3}
+  - {fileID: 1398762421150022950, guid: 0c3a82fd86dc52b4db3a6b923b82be05, type: 3}
   materials:
   - {fileID: 2100000, guid: 8df065695dcbf6f4dbf8f7c760d8110e, type: 2}
   - {fileID: 2100000, guid: a99e00881e86ffb4c848b589dd1343ad, type: 2}
