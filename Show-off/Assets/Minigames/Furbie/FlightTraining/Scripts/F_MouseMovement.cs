@@ -1,30 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class MouseMovement : MonoBehaviour
+public class F_MouseMovement : MonoBehaviour
 {
 
-   // [SerializeField] private Rigidbody rb;
-    /*Vector3 newPos;
-
-    public float offset;
-
-    void Start()
-    {
-    }
-
-    void Update()
-    {
-        newPos = Input.mousePosition;
-        newPos.z = offset;
-        transform.position = Camera.main.ScreenToWorldPoint(newPos);
-        //Debug.Log("mouse x pos = " + newPos.x);
-        //Debug.Log("mouse y pos = " + newPos.y);
-
-
-    }
-    */
 
     Vector3 worldMousePos;
     public float offset;
@@ -63,20 +44,36 @@ public class MouseMovement : MonoBehaviour
 
     }
 
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Hoop")
         {
-            this.gameObject.GetComponent<Rigidbody>().useGravity= true;
+            this.gameObject.GetComponent<Rigidbody>().useGravity = true;
 
-            this.gameObject.GetComponent<MouseMovement>().enabled = false;
-            
+            this.gameObject.GetComponent<F_MouseMovement>().enabled = false;
+
+            StartCoroutine( WaitForSec() );
         }
 
-        
+
     }
 
+    IEnumerator WaitForSec()
+    {
+        Debug.Log(" should start coroutine");
+        yield return new WaitForSeconds(3);
 
+        SceneManager.LoadScene("F_GameOver");
+        Debug.Log(" should end coroutine");
+    }
 
 }
+
+
+
+
+
+
+
 
