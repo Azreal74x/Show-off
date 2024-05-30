@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class F_MouseMovement : MonoBehaviour
 {
@@ -52,11 +53,27 @@ public class F_MouseMovement : MonoBehaviour
 
             this.gameObject.GetComponent<F_MouseMovement>().enabled = false;
 
+            StartCoroutine( WaitForSec() );
         }
 
 
     }
 
+    IEnumerator WaitForSec()
+    {
+        Debug.Log(" should start coroutine");
+        yield return new WaitForSeconds(3);
+
+        SceneManager.LoadScene("F_GameOver");
+        Debug.Log(" should end coroutine");
+    }
 
 }
+
+
+
+
+
+
+
 

@@ -24,7 +24,6 @@ public class F_ObjectSpawner : MonoBehaviour
     [SerializeField] private List<GameObject> objectsPrefabs = new List<GameObject>(); //create list for the different object prefabs
     [SerializeField] private List<Material> materials = new List<Material>(); //create list for the different materials
 
-    private bool start = true;
 
     private void Start()
     {
