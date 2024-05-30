@@ -5,20 +5,24 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Score : MonoBehaviour {
+public class J_Score : MonoBehaviour {
 
   [SerializeField] TMP_Text scoreText;
   [SerializeField] private FloatSO highScoreSO;
   private float score;
-  private float badCandyEaten = 0;
+  public float lostCandy = 0;
+
+  [SerializeField] private BoolSO J_IsHappy;
+  [SerializeField] private GameObject houseJemieButton;
 
   private void Start() {
     scoreText.text = score.ToString(); //set score text
   }
 
   private void Update() {
-    if(badCandyEaten >= 5) {
-      //SceneManager.LoadScene("GameEndMenu"); //has to be changed to actual scene name
+    if(lostCandy >= 5) {
+      J_IsHappy.Value = true;
+      houseJemieButton.SetActive(true);
     }
   }
 
@@ -33,7 +37,7 @@ public class Score : MonoBehaviour {
         }
       }
       if (collision.gameObject.tag == "BadCandy") {
-        badCandyEaten += 1;
+        lostCandy += 1;
       }
     }
   }
