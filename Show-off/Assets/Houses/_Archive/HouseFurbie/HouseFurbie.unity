@@ -269,6 +269,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bfcbf176ff4bbe49b20a5d565df2a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  houseScene: 
+  F_gameName: 
+  J_gameName: 
+  T_gameName: 
+  F_roomName: 
+  J_roomName: 
+  T_roomName: 
+  F_gameover: 
+  J_gameover: 
+  T_gameover: 
 --- !u!1 &56478144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,8 +1065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.03}
   m_AnchorMax: {x: 0.3, y: 0.2}
-  m_AnchoredPosition: {x: -346, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -357.1648, y: 0}
+  m_SizeDelta: {x: 22.3297, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &285471272
 MonoBehaviour:
@@ -1179,6 +1189,7 @@ MonoBehaviour:
   slider: {fileID: 591059582}
   decreaseDelay: 10
   J_IsHappy: {fileID: 11400000, guid: 03a8a7a21b0c7ec4db94009764ddc525, type: 2}
+  T_IsHappy: {fileID: 0}
 --- !u!1 &639607397
 GameObject:
   m_ObjectHideFlags: 0
