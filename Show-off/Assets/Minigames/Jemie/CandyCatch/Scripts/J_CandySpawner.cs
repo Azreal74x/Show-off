@@ -9,7 +9,7 @@ public class J_CandySpawner : MonoBehaviour {
 
   [SerializeField] private List<GameObject> spawnPoints = new List<GameObject>(); //create list for all possible spawnpoints
   [SerializeField] private List<GameObject> objectsPrefabs = new List<GameObject>(); //create list for the different object prefabs
-  [SerializeField] private List<Material> materials = new List<Material>(); //create list for the different materials
+  //[SerializeField] private List<Material> materials = new List<Material>(); //create list for the different materials
 
   private float startDelay = 2f; //the starting amount for spawning delay
   [SerializeField] private float delay = 0f; //the actual delay in between spawning
@@ -39,9 +39,9 @@ public class J_CandySpawner : MonoBehaviour {
     if (Time.time - lastSpawnTime >= delay) { //if time - last spawn time is bigger than time passed, so if this amount of time passed
       int randomObjectPrefab = Random.Range(0, objectsPrefabs.Count); //get random object from the prefabs list
       int randomSpawnPoint = Random.Range(0, spawnPoints.Count); //get random spawnpoint from the spawnpoints list
-      int randomMaterial = Random.Range(0, materials.Count); //get random material from the materials list
+      //int randomMaterial = Random.Range(0, materials.Count); //get random material from the materials list
       instantiatePrefab = Instantiate(objectsPrefabs[randomObjectPrefab], spawnPoints[randomSpawnPoint].transform.position, transform.rotation, transform); //instantiate the random object at random spawnpoint with current parent rotation as a child of what this script is attached to
-      instantiatePrefab.GetComponent<Renderer>().material = materials[randomMaterial]; //assign material to the newly created object
+      //instantiatePrefab.GetComponent<Renderer>().material = materials[randomMaterial]; //assign material to the newly created object
       instantiatePrefab.GetComponent<J_Candy>().fallSpeed = fallSpeed;
       lastSpawnTime = Time.time; //set last spawn time to current time to keep track from this point on again
     }
