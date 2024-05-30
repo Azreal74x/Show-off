@@ -1178,6 +1178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 591059582}
   decreaseDelay: 10
+  J_IsHappy: {fileID: 11400000, guid: 03a8a7a21b0c7ec4db94009764ddc525, type: 2}
 --- !u!1 &639607397
 GameObject:
   m_ObjectHideFlags: 0
