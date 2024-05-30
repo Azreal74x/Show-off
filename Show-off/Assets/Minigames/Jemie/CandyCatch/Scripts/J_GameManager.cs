@@ -14,6 +14,6 @@ public class J_GameManager : MonoBehaviour {
   }
 
   public void LoadHouseJemie() {
-    SceneManager.LoadScene("HouseJemie");
+    SceneManager.LoadScene("J_House");
   }
 }

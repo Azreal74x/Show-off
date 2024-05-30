@@ -24,7 +24,6 @@ public class T_Timer : MonoBehaviour {
       countdown -= Time.deltaTime;
     }
     else if(countdown <= 0){
-      //SceneManager.LoadScene("GameEndMenu"); //has to be changed to actual scene name
       countdown = 0;
       T_isHappy.Value = true;
       houseTamaraButton.SetActive(true);

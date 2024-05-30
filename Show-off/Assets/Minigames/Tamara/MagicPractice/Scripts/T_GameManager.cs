@@ -15,6 +15,6 @@ public class T_GameManager : MonoBehaviour {
   }
 
   public void LoadHouseTamara() {
-    SceneManager.LoadScene("HouseTamara");
+    SceneManager.LoadScene("T_House");
   }
 }

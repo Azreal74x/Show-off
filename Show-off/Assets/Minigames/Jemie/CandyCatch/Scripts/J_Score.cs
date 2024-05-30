@@ -21,7 +21,6 @@ public class J_Score : MonoBehaviour {
 
   private void Update() {
     if(lostCandy >= 5) {
-      //SceneManager.LoadScene("GameEndMenu"); //has to be changed to actual scene name
       J_IsHappy.Value = true;
       houseJemieButton.SetActive(true);
     }
