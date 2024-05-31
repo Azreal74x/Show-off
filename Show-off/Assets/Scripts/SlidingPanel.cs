@@ -120,12 +120,12 @@ public class SlidingPanel : MonoBehaviour
 
         if (panelSide == "left")
         {
-            resultWidth = -canvasWidth / 3;
+            resultWidth = -canvasWidth / 3 - 100;
             actualWidth = 0;
         }
         else
         {
-            resultWidth = canvasWidth / 3;
+            resultWidth = canvasWidth / 3 +100;
             actualWidth = 0;
         }
         panelMovement = 2;
