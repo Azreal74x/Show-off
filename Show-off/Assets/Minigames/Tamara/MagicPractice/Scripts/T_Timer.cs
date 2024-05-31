@@ -5,42 +5,52 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class T_Timer : MonoBehaviour {
+public class T_Timer : MonoBehaviour
+{
 
-  [SerializeField] private float countdown = 60f;
+    [SerializeField] private float countdown = 60f;
 
-  [SerializeField] TMP_Text timeText;
-  [SerializeField] private BoolSO T_isHappy;
+    [SerializeField] TMP_Text timeText;
+    [SerializeField] private BoolSO T_isHappy;
 
-  [SerializeField] private GameObject houseTamaraButton;
+    [SerializeField] private GameObject houseTamaraButton;
 
-  [SerializeField] private ScoreSO scoreKeeperSO;
-  private T_Score T_Score;
+    [SerializeField] private ScoreSO scoreKeeperSO;
+    private T_Score T_Score;
+
+    [SerializeField] ButtonScripts buttonScripts;
 
 
-  private void Start() {
-    T_Score = gameObject.GetComponent<T_Score>();
-  }
-
-  private void Update() {
-    timeText.text = Mathf.FloorToInt(countdown).ToString();
-
-    if(countdown > 0){
-      countdown -= Time.deltaTime;
+    private void Start()
+    {
+        T_Score = gameObject.GetComponent<T_Score>();
     }
-    else if(countdown <= 0){ //if game end / timer end
-      countdown = 0;
-      T_isHappy.Value = true;
-      houseTamaraButton.SetActive(true);
 
-      if (T_Score.score > scoreKeeperSO.HighScoreValue) { //if current score is higher than high score
-        scoreKeeperSO.HighScoreValue = T_Score.score; //set high score to current score
-      }
+    private void Update()
+    {
+        timeText.text = Mathf.FloorToInt(countdown).ToString();
 
-      scoreKeeperSO.CurrentScoreValue = T_Score.score; //save current score
+        if (countdown > 0)
+        {
+            countdown -= Time.deltaTime;
+        }
+        else if (countdown <= 0)
+        { //if game end / timer end
+            countdown = 0;
+            T_isHappy.Value = true;
+            //houseTamaraButton.SetActive(true);
+
+            if (T_Score.score > scoreKeeperSO.HighScoreValue)
+            { //if current score is higher than high score
+                scoreKeeperSO.HighScoreValue = T_Score.score; //set high score to current score
+            }
+
+            scoreKeeperSO.CurrentScoreValue = T_Score.score; //save current score
+
+            buttonScripts.GameOver();
+        }
     }
-  }
 
-    
+
 
 }
