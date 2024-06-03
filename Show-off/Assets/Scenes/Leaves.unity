@@ -241,6 +241,94 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1001 &1439975599
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 239.29999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 239.29999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 239.29999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.3851
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0317e2c37772764bb515aff5836ea01, type: 2}
+    - target: {fileID: 919132149155446097, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37,
+        type: 3}
+      propertyPath: m_Name
+      value: tree2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7ed4d16ade6c1aa459dc00f0eabaaa37, type: 3}
 --- !u!1 &1591121083
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +366,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -394,7 +482,7 @@ PrefabInstance:
     - target: {fileID: 3700626389361736197, guid: 7c33ecb6ccc2f5c47b51422139bd3268,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.69
+      value: 13.7
       objectReference: {fileID: 0}
     - target: {fileID: 3700626389361736197, guid: 7c33ecb6ccc2f5c47b51422139bd3268,
         type: 3}
@@ -453,3 +541,4 @@ SceneRoots:
   - {fileID: 1591121086}
   - {fileID: 4684354}
   - {fileID: 3632353888695170825}
+  - {fileID: 1439975599}
