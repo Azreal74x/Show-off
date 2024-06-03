@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Houses/RoomsPlaceholder/Scenes/T_House.unity
     guid: da44437740314cd4fa293d46f0186975
+  - enabled: 1
+    path: Assets/Minigames/Jemie/CandyCatch/J_GameOver.unity
+    guid: 56afe48875d75a3468d136161453478a
+  - enabled: 1
+    path: Assets/Minigames/Tamara/MagicPractice/T_GameOver.unity
+    guid: ae1e0610e28c051489543a0ea141f2c8
   m_configObjects: {}

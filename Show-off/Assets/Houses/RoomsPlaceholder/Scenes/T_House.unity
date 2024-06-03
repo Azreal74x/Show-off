@@ -585,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0335803ac492f074f93904ac7e6d5240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  happinessBar: {fileID: 0}
+  happinessBar: {fileID: 2122017895}
 --- !u!1 &565480347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,6 +1314,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bfcbf176ff4bbe49b20a5d565df2a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2122017895 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8381949042590752666, guid: 70363eca3ef137a4e9b6a5424094408c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2122017893}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f6c113b5659ed41b3d8cc1d9dee064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &64244841600191731

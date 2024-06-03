@@ -415,19 +415,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1016198519}
-        m_TargetAssemblyTypeName: GameMan, Assembly-CSharp
-        m_MethodName: LoadHouse2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!65 &163325634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -734,6 +722,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
+  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -878,6 +867,29 @@ MonoBehaviour:
   F_house: PrototypeHouseFurby
   T_house: PrototypeHouseGirl
   J_house: PrototypeHouseJester
+  buttons: {fileID: 330585549}
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bfcbf176ff4bbe49b20a5d565df2a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseScene: HomeScene
+  F_gameName: FlightTraining
+  J_gameName: CandyCatch
+  T_gameName: MagicPractice
+  F_roomName: F_HouseS
+  J_roomName: J_House
+  T_roomName: T_HouseS
+  F_gameover: F_GameOver
+  J_gameover: J_GameOver
+  T_gameover: T_GameOver
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,19 +2178,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1016198519}
-        m_TargetAssemblyTypeName: GameMan, Assembly-CSharp
-        m_MethodName: BackButtonAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!65 &1011779596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3949,7 +3949,7 @@ PrefabInstance:
     - target: {fileID: 7706549442794734558, guid: 2165e4dc74380af4ca5149b270c33edb,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3984,7 +3984,7 @@ PrefabInstance:
     - target: {fileID: 181890638050119611, guid: 91ccca33dc34ab247b50ec0192b6a1ee,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 529993379797309258, guid: 91ccca33dc34ab247b50ec0192b6a1ee,
         type: 3}

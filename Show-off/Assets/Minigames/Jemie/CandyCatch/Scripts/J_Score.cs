@@ -16,6 +16,8 @@ public class J_Score : MonoBehaviour
     [SerializeField] private BoolSO J_IsHappy;
     [SerializeField] private GameObject houseJemieButton;
 
+    [SerializeField] ButtonScripts buttonScripts;
+
     private void Start()
     {
         scoreText.text = score.ToString(); //set score text
@@ -26,7 +28,7 @@ public class J_Score : MonoBehaviour
         if (lostCandy >= 5)
         { //game end
             J_IsHappy.Value = true;
-            houseJemieButton.SetActive(true);
+            //houseJemieButton.SetActive(true);
 
             if (score > scoreKeeperSO.HighScoreValue)
             { //if current score is higher than high score
@@ -34,6 +36,8 @@ public class J_Score : MonoBehaviour
             }
 
             scoreKeeperSO.CurrentScoreValue = score;
+
+            buttonScripts.GameOver();
         }
     }
 

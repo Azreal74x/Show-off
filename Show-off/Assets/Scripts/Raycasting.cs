@@ -12,7 +12,7 @@ public class Raycasting : MonoBehaviour
     public string T_house;
     public string J_house;
 
-    ButtonScripts buttons;
+    public ButtonScripts buttons;
 
 
     void Start()

@@ -2303,6 +2303,7 @@ MonoBehaviour:
   lostCandy: 0
   J_IsHappy: {fileID: 11400000, guid: 03a8a7a21b0c7ec4db94009764ddc525, type: 2}
   houseJemieButton: {fileID: 988576943}
+  buttonScripts: {fileID: 1138271154}
 --- !u!114 &1138271154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2319,9 +2320,9 @@ MonoBehaviour:
   F_gameName: FlightTraining
   J_gameName: CandyCatch
   T_gameName: MagicPractice
-  F_roomName: HouseFurbie
-  J_roomName: HouseJemie
-  T_roomName: HouseTamara
+  F_roomName: F_House
+  J_roomName: J_House
+  T_roomName: T_House
   F_gameover: F_GameOver
   J_gameover: J_GameOver
   T_gameover: T_GameOver
