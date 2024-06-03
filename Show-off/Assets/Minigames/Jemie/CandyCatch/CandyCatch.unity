@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17412764, g: 0.21774673, b: 0.29994333, a: 1}
+  m_IndirectSpecularColor: {r: 0.17412762, g: 0.21774673, b: 0.29994327, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -872,8 +872,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Score
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6c3719cd4b68147489cf5ba7b4337ae0, type: 2}
+  m_sharedMaterial: {fileID: -8027070008128254699, guid: 6c3719cd4b68147489cf5ba7b4337ae0,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2147,6 +2148,7 @@ GameObject:
   - component: {fileID: 1138271149}
   - component: {fileID: 1138271148}
   - component: {fileID: 1138271152}
+  - component: {fileID: 1138271154}
   - component: {fileID: 1138271147}
   - component: {fileID: 1138271151}
   m_Layer: 0
@@ -2301,6 +2303,29 @@ MonoBehaviour:
   lostCandy: 0
   J_IsHappy: {fileID: 11400000, guid: 03a8a7a21b0c7ec4db94009764ddc525, type: 2}
   houseJemieButton: {fileID: 988576943}
+  buttonScripts: {fileID: 1138271154}
+--- !u!114 &1138271154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138271146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bfcbf176ff4bbe49b20a5d565df2a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseScene: 
+  F_gameName: FlightTraining
+  J_gameName: CandyCatch
+  T_gameName: MagicPractice
+  F_roomName: F_House
+  J_roomName: J_House
+  T_roomName: T_House
+  F_gameover: F_GameOver
+  J_gameover: J_GameOver
+  T_gameover: T_GameOver
 --- !u!1 &1358023652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,10 +2948,6 @@ MonoBehaviour:
   - {fileID: 1163115406408577041, guid: e1e282b8bb260d24c8a789148ef46064, type: 3}
   - {fileID: 6712431710584675378, guid: fa0a07a67cdd9bf40ae746ed75ee6ad9, type: 3}
   - {fileID: 1398762421150022950, guid: 0c3a82fd86dc52b4db3a6b923b82be05, type: 3}
-  materials:
-  - {fileID: 2100000, guid: 8df065695dcbf6f4dbf8f7c760d8110e, type: 2}
-  - {fileID: 2100000, guid: a99e00881e86ffb4c848b589dd1343ad, type: 2}
-  - {fileID: 2100000, guid: 8023eff0df8d9384198d999f7e76f30b, type: 2}
   delay: 0
   spawnDecreaseSpeed: 0.04
   minDelay: 0.4

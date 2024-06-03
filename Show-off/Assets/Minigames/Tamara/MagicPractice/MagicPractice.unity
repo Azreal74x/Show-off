@@ -3237,6 +3237,7 @@ GameObject:
   - component: {fileID: 1856423591}
   - component: {fileID: 1856423587}
   - component: {fileID: 1856423586}
+  - component: {fileID: 1856423593}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3387,11 +3388,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f761e6d016e3fa49a031087ec41da51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdown: 10
+  countdown: 60
   timeText: {fileID: 1439877882}
   T_isHappy: {fileID: 11400000, guid: 61dc010cf6aa78b45af0898571d72f64, type: 2}
   houseTamaraButton: {fileID: 1120314740}
   scoreKeeperSO: {fileID: 11400000, guid: 116693193f25c9243a8f92310e956e3d, type: 2}
+  buttonScripts: {fileID: 1856423593}
+--- !u!114 &1856423593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856423585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bfcbf176ff4bbe49b20a5d565df2a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseScene: 
+  F_gameName: FlightTraining
+  J_gameName: CandyCatch
+  T_gameName: MagicPractice
+  F_roomName: F_House
+  J_roomName: J_House
+  T_roomName: T_House
+  F_gameover: F_GameOver
+  J_gameover: J_GameOver
+  T_gameover: T_GameOver
 --- !u!1 &1941481879
 GameObject:
   m_ObjectHideFlags: 0

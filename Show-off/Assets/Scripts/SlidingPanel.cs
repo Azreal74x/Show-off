@@ -16,6 +16,9 @@ public class SlidingPanel : MonoBehaviour
     float actualWidth;
 
     int panelMovement;
+
+    private bool open = false;
+
     // state identifier for which ovement is the panel doing
     // 0 = nothing
     // 1 = opening
@@ -81,7 +84,7 @@ public class SlidingPanel : MonoBehaviour
                 }
             }
             panel.anchoredPosition = new Vector2(actualWidth, 0);
-           
+
 
         }
 
@@ -89,38 +92,44 @@ public class SlidingPanel : MonoBehaviour
 
     public void OpenPanel()
     {
-        if (panelSide == "left")
+        if (open == false)
         {
-            resultWidth = 0;
-            actualWidth = -canvasWidth / 3;
+            open = true;
+
+            if (panelSide == "left")
+            {
+                resultWidth = 0;
+                actualWidth = -canvasWidth / 3;
+            }
+            else
+            {
+
+                resultWidth = 0;
+                actualWidth = canvasWidth / 3;
+            }
+
+            panelMovement = 1;
+
+            //panel.anchoredPosition = new Vector2(0, 0);
+
         }
-        else
-        {
-
-            resultWidth = 0;
-            actualWidth = canvasWidth / 3;
-        }
-
-        panelMovement = 1;
-
-        //panel.anchoredPosition = new Vector2(0, 0);
-
     }
     public void ClosePanel()
     {
+        open = false;
+
         if (panelSide == "left")
         {
-            resultWidth = -canvasWidth / 3;
+            resultWidth = -canvasWidth / 3 - 100;
             actualWidth = 0;
         }
         else
         {
-            resultWidth = canvasWidth / 3;
+            resultWidth = canvasWidth / 3 +100;
             actualWidth = 0;
         }
         panelMovement = 2;
         //panel.anchoredPosition = new Vector2(-canvasWidth / 3, 0);
-
 
     }
 

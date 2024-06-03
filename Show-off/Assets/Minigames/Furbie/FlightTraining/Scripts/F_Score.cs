@@ -7,8 +7,8 @@ public class F_Score : MonoBehaviour
 {
 
     [SerializeField] TMP_Text scoreText;
-    [SerializeField] private FloatSO highScoreSO;
     public float score = 0;
+    [SerializeField] private FloatSO highScoreSO;
 
 
     private void Start()
