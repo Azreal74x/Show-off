@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigames/Tamara/MagicPractice/T_GameOver.unity
     guid: ae1e0610e28c051489543a0ea141f2c8
+  - enabled: 1
+    path: Assets/Minigames/Tamara/MagicPractice/MagicPractice.unity
+    guid: 54ec7609cebd94c4893100c421cadfaf
+  - enabled: 1
+    path: Assets/Minigames/Jemie/CandyCatch/CandyCatch.unity
+    guid: 8eea0542b0c916a4588fde1e24eaf585
   m_configObjects: {}
