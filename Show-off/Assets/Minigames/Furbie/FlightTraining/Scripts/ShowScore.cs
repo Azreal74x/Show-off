@@ -14,10 +14,21 @@ public class ShowScore : MonoBehaviour
     [SerializeField] private string scoreText;
     [SerializeField] private string highscoreText;
 
+    [SerializeField] private List<GameObject> images = new List<GameObject>();
+
+    // images[0] = gameover  /  images[1] = highscore
+
     void Start()
     {
         score.text = scoreText + scoreKeeper.CurrentScoreValue.ToString();
         highscore.text = highscoreText + scoreKeeper.HighScoreValue.ToString();
+
+        if(scoreKeeper.CurrentScoreValue == scoreKeeper.HighScoreValue)
+        {
+            images[0].SetActive(false);
+            images[1].SetActive(true);
+        }
+
     }
 
     // Update is called once per frame
