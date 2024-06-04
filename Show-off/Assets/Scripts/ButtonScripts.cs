@@ -50,13 +50,13 @@ public class ButtonScripts : MonoBehaviour {
 
   //specific method for each house click
   public void F_LoadHouse() {
-    SceneManager.LoadScene("HouseFurbie");
+    SceneManager.LoadScene("F_House");
   }
   public void T_LoadHouse() {
-    SceneManager.LoadScene("HouseTamara");
+    SceneManager.LoadScene("T_House");
   }
   public void J_LoadHouse() {
-    SceneManager.LoadScene("HouseJemie");
+    SceneManager.LoadScene("J_House");
   }
 
   //depending in what scene u are, it goes to the coresponding next scene
