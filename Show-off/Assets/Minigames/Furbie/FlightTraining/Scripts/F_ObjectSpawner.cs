@@ -11,8 +11,8 @@ public class F_ObjectSpawner : MonoBehaviour
     private int count = 0;
 
     [SerializeField] private float spawnDelay = 10f; //the delay between spawning of objects
-    [SerializeField] private float minDelay = 1f;
-    [SerializeField] private float delayDecrease = 0.5f;
+    [SerializeField] private float minDelay = 0.5f;
+    [SerializeField] private float delayDecrease = 0.3f;
 
     [SerializeField] private float hoopSpeed = 1f;
     [SerializeField] private float maxHoopSpeed = 3f;
@@ -32,7 +32,7 @@ public class F_ObjectSpawner : MonoBehaviour
 
     private void Update()
     {
-        
+
         if (Time.time - lastSpawnTime >= spawnDelay)
         { //if time - last spawn time is bigger than time passed, so if this amount of time passed
             int randomObjectPrefab = Random.Range(0, objectsPrefabs.Count); //get random object from the prefabs list
