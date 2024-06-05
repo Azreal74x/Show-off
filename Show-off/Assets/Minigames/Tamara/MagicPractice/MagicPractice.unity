@@ -1511,7 +1511,7 @@ MonoBehaviour:
   bulletSpawner: {fileID: 1062159012}
   bulletParent: {fileID: 1166726773}
   amplitude: 80
-  beamSpeed: 1
+  beamSpeed: 0.75
   player: {fileID: 898486228}
 --- !u!1 &648462276
 GameObject:
