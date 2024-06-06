@@ -1969,10 +1969,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.83029
       objectReference: {fileID: 0}
+    - target: {fileID: 3119383876888834485, guid: 70363eca3ef137a4e9b6a5424094408c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 831f009fce040be45ae28ceec274e4c1,
+        type: 3}
+    - target: {fileID: 3119383876888834485, guid: 70363eca3ef137a4e9b6a5424094408c,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119383876888834485, guid: 70363eca3ef137a4e9b6a5424094408c,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119383876888834485, guid: 70363eca3ef137a4e9b6a5424094408c,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119383876888834485, guid: 70363eca3ef137a4e9b6a5424094408c,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3735938814335637785, guid: 70363eca3ef137a4e9b6a5424094408c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -16.794922
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298993726789386018, guid: 70363eca3ef137a4e9b6a5424094408c,
+        type: 3}
+      propertyPath: m_Value
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
