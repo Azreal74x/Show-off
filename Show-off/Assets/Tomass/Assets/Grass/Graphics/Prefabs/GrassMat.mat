@@ -135,5 +135,8 @@ Material:
     - _BaseColor: {r: 0.17731972, g: 0.6377357, b: 0.037301492, a: 1}
     - _Color: {r: 0.17731968, g: 0.6377357, b: 0.037301492, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FarColor: {r: 0.1850787, g: 0.4490565, b: 0.07371303, a: 0}
+    - _NearColor: {r: 0.19948342, g: 0.5622641, b: 0.07532217, a: 1}
+    - _NearFarRange: {r: 20, g: 30, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

@@ -1421,7 +1421,7 @@ Transform:
   m_GameObject: {fileID: 1062251778}
   serializedVersion: 2
   m_LocalRotation: {x: 0.046810884, y: -0, z: -0, w: 0.9989038}
-  m_LocalPosition: {x: 0, y: 10, z: -10.2}
+  m_LocalPosition: {x: 0, y: 10, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2117,6 +2117,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_DetailObjectDensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7271475627145054252, guid: 77ce8301fbed6354695846b7430576f0,
+        type: 3}
+      propertyPath: m_DetailObjectDistance
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7271475627145054252, guid: 77ce8301fbed6354695846b7430576f0,
+        type: 3}
+      propertyPath: m_TreeMaximumFullLODCount
+      value: 1162
       objectReference: {fileID: 0}
     - target: {fileID: 7917431044280662081, guid: 77ce8301fbed6354695846b7430576f0,
         type: 3}
