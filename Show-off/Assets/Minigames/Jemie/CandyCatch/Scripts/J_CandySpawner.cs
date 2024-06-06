@@ -21,19 +21,23 @@ public class J_CandySpawner : MonoBehaviour {
   [SerializeField] private float fallIncreaseSpeed = 0.1f;
   [SerializeField] private float maxFallSpeed = 7f;
 
+  private float elapsedTime; //custom timer to keep track of when scene started
+
   private void Start() {
     lastSpawnTime = Time.time; //set last spawn time to current time to keep track
+    elapsedTime = 0f; //set custom timer to 0
   }
 
   private void Update() {
-    delay = startDelay - Time.time * spawnDecreaseSpeed; //slowly decrease the spawning delay
+    elapsedTime += Time.deltaTime; //update the custom timer
+    delay = startDelay - elapsedTime * spawnDecreaseSpeed; //slowly decrease the spawning delay
     if (delay <= minDelay) { //if delay is smaller than or equal to minDelay
       delay = minDelay; //if delay is lower than minimum set it to minimum
     }
 
-    fallSpeed += fallIncreaseSpeed * Time.deltaTime;
+    fallSpeed += fallIncreaseSpeed * Time.deltaTime; //increase fallspeed
     if (fallSpeed > maxFallSpeed) {
-      fallSpeed = maxFallSpeed; // Clamp the fall speed to maxFallSpeed
+      fallSpeed = maxFallSpeed; //clamp the fall speed to maxFallSpeed
     }
 
     if (Time.time - lastSpawnTime >= delay) { //if time - last spawn time is bigger than time passed, so if this amount of time passed
