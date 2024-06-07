@@ -34,7 +34,7 @@ public class T_Timer : MonoBehaviour
         {
             countdown -= Time.deltaTime;
         }
-        else if (countdown <= 0)
+        else if (countdown <= 1)
         { //if game end / timer end
             countdown = 0;
             T_isHappy.Value = true;

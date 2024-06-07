@@ -17,14 +17,6 @@ public class T_ObjectBehaviour : MonoBehaviour {
 
 
   private void Update() {
-    if (gameObject.name == "StoneCube(Clone)") {
-      //Debug.Log("another stone cube");
-    }
-
-    if (gameObject.name == "GoldCube(Clone)" || gameObject.name == "GoldSphere(Clone)") {
-      //Debug.Log("collided with gold");
-    }
-
     if (moveToPlayer) {
       Vector3 direction = (player.transform.position - transform.position).normalized; //calculate direction to player
       transform.position += direction * moveSpeed * Time.deltaTime; //move towards player
@@ -52,7 +44,7 @@ public class T_ObjectBehaviour : MonoBehaviour {
         moveToPlayer = true;
       }
 
-      if (collision.gameObject.tag == "Gold" || collision.gameObject.tag == "Stone") { //startDelay if collision was with another piece of gold or stone
+      if (collision.gameObject.tag == "GoodCandy" || collision.gameObject.tag == "BadCandy") { //startDelay if collision was with another piece of gold or stone
         Destroy(gameObject); //destroy the object this script is attached to
       }
 
