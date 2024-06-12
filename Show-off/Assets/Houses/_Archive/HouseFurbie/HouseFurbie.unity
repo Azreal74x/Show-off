@@ -745,7 +745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1401655176
 Transform:
   m_ObjectHideFlags: 0
@@ -1007,6 +1007,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   happinessBar: {fileID: 591059583}
+  petSounds: []
+  soundDelay: 1
 --- !u!1 &1432855391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1516,11 @@ PrefabInstance:
     - target: {fileID: 31229820836240387, guid: 70363eca3ef137a4e9b6a5424094408c,
         type: 3}
       propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 31229820836240387, guid: 70363eca3ef137a4e9b6a5424094408c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1591439654493579925, guid: 70363eca3ef137a4e9b6a5424094408c,

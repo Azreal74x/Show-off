@@ -33,7 +33,8 @@ public class T_ObjectSpawner : MonoBehaviour
       GameObject spawn = GetEmptySpawn(); 
 
       if (spawn != null) {
-        instantiatePrefab = Instantiate(objectsPrefabs[randomObjectPrefab], spawn.transform.position, transform.rotation, transform); // instantiate the random object at random spawnpoint with current parent rotation as a child of what this script is attached to
+        instantiatePrefab = Instantiate(objectsPrefabs[randomObjectPrefab], spawn.transform.position, objectsPrefabs[randomObjectPrefab].transform.rotation, transform); // instantiate the random object at random spawnpoint with current parent rotation as a child of what this script is attached to
+        instantiatePrefab.transform.localScale = objectsPrefabs[randomObjectPrefab].transform.localScale; //set scale to original prefab scale
         spawnTaken[spawn] = true; // mark this spawn point as occupied
         instantiatePrefab.GetComponent<T_ObjectBehaviour>().SetSpawner(this, spawn); // set the spawner and spawn point in the GoldBehaviour script
         lastSpawnTime = Time.time; // set last spawn time to current time to keep track from this point on again

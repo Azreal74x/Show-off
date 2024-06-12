@@ -19,13 +19,13 @@ public class T_Score : MonoBehaviour {
 
   private void OnCollisionEnter(Collision collision) { //method for collision checking
     if (collision != null) { //if we collided with anything (we = the object this script is attached to)
-      if (collision.gameObject.tag == "Gold") { //startDelay if the collision was with a gold by checking the tag
+      if (collision.gameObject.tag == "GoodCandy") { //startDelay if the collision was with a gold by checking the tag
         score += 1; //update score
         scoreText.text = score.ToString(); //update score text
         
         canMove = true;
       }
-      else if (collision.gameObject.tag == "Stone") { //startDelay if the collision was with a stone by checking the tag
+      else if (collision.gameObject.tag == "BadCandy") { //startDelay if the collision was with a stone by checking the tag
         canMove = true;
       }
     }
