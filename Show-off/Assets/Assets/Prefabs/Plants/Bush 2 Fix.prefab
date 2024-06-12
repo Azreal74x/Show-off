@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6105850786377295779
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.64782
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.909999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_Name
+      value: Bush 2 Fix
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613470154832850438, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6208d0d8835400940a36d102884d754b, type: 2}
+    - target: {fileID: 2992768724127207208, guid: f37aff07a0b898049807b095d96b7e63,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5d9e4ee68a7f9a446955795758a1f966, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 3347417574320557245, guid: f37aff07a0b898049807b095d96b7e63, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f37aff07a0b898049807b095d96b7e63, type: 3}
