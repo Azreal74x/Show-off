@@ -114,6 +114,7 @@ public class SlidingPanel : MonoBehaviour
 
         }
     }
+
     public void ClosePanel()
     {
         open = false;
