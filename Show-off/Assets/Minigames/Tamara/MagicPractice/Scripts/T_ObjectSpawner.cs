@@ -39,7 +39,7 @@ public class T_ObjectSpawner : MonoBehaviour
         instantiatePrefab.GetComponent<T_ObjectBehaviour>().SetSpawner(this, spawn); // set the spawner and spawn point in the GoldBehaviour script
         lastSpawnTime = Time.time; // set last spawn time to current time to keep track from this point on again
       }
-    }
+    } 
   }
 
   private GameObject GetEmptySpawn() {

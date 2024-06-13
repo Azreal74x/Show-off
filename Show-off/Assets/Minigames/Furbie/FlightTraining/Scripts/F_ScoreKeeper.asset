@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96a84b4f1d796324e974139bed432862, type: 3}
-  m_Name: ScoreKeeper
+  m_Name: F_ScoreKeeper
   m_EditorClassIdentifier: 
   _highScoreValue: 0
   _currentScoreValue: 0
