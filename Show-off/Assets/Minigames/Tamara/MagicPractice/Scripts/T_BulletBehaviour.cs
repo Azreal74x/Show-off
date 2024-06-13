@@ -10,12 +10,12 @@ public class T_BulletBehaviour : MonoBehaviour {
   [SerializeField] private float lifetime = 5f; //the delay between spawning of objects
 
   GameObject player; //reference to Player obj
-  T_Score scoreBehaviour; //reference to ScoreBehaviour script
+  T_Score T_Score; //reference to ScoreBehaviour script
 
   private void Start() {
     lastSpawnTime = Time.time; //set last spawn time to current time to keep track
-    player = GameObject.FindWithTag("Player"); //find player by its tag
-    scoreBehaviour = player.GetComponent<T_Score>(); 
+    player = GameObject.FindGameObjectWithTag("Player"); //find player by its tag
+    T_Score = player.GetComponent<T_Score>();
   }
 
   private void Update() {
@@ -30,14 +30,19 @@ public class T_BulletBehaviour : MonoBehaviour {
 
   private void OnCollisionEnter(Collision collision) { //method for collision checking
     if (collision != null) { //if we collided with anything (we = the object this script is attached to)
-      if (collision.gameObject.tag == "Gold") { //startDelay if the collision was with a gold by checking the tag
+      if (collision.gameObject.tag == "GoodCandy") { //startDelay if the collision was with a gold by checking the tag
         //Debug.Log("Collided with gold");
       }
-      else if (collision.gameObject.tag == "Stone") { //startDelay if the collision was with a stone by checking the tag
+      else if (collision.gameObject.tag == "BadCandy") { //startDelay if the collision was with a stone by checking the tag
         //Debug.Log("Collided with gold");
       }
       else if(collision.gameObject.tag == "Kill") {
-        scoreBehaviour.canMove = true;
+        if (T_Score != null) {
+          T_Score.canMove = true;
+        }
+        else {
+          Debug.Log("T_Score is null");
+        }
       }
       Destroy(gameObject); //destroy the object this script is attached to
     }

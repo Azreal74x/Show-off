@@ -964,13 +964,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bfcbf176ff4bbe49b20a5d565df2a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  houseScene: HomeScene
+  houseScene: HousesScene
   F_gameName: FlightTraining
   J_gameName: CandyCatch
   T_gameName: MagicPractice
-  F_roomName: F_HouseS
+  F_roomName: F_House
   J_roomName: J_House
-  T_roomName: T_HouseS
+  T_roomName: T_House
   F_gameover: F_GameOver
   J_gameover: J_GameOver
   T_gameover: T_GameOver
