@@ -1790,6 +1790,7 @@ MonoBehaviour:
   score: 0
   scoreKeeperSO: {fileID: 11400000, guid: 17bb42dddeadfcc40bf2f090930186c5, type: 2}
   wall: {fileID: 677164672}
+  F_IsHappy: {fileID: 11400000, guid: b34dd47fee3d0294bb4af0fb7bb7990c, type: 2}
 --- !u!136 &1725193263
 CapsuleCollider:
   m_ObjectHideFlags: 0

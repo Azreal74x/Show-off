@@ -11,6 +11,10 @@ public class HappyBar : MonoBehaviour {
 
   [SerializeField] private BoolSO J_IsHappy;
   [SerializeField] private BoolSO T_IsHappy;
+  [SerializeField] private BoolSO F_IsHappy;
+
+  [SerializeField] private GameObject faceImage;
+  [SerializeField] private List<Sprite> blobs = new List<Sprite>();  
 
   void Start() {
     LastDecrease = Time.time; //set last spawn time to current time to keep track
@@ -22,15 +26,7 @@ public class HappyBar : MonoBehaviour {
       LastDecrease = Time.time; //set last spawn time to current time to keep track from this point on again
     }
 
-    if (J_IsHappy.Value == true) {
-      slider.value += 20;
-      J_IsHappy.Value = false;
-    }
-
-    if (T_IsHappy.Value == true) {
-      slider.value += 20;
-      T_IsHappy.Value = false;
-    }
+    ValueCheck();
   }
 
   public void AddHappyLevel(float happyLevel) {
@@ -45,6 +41,34 @@ public class HappyBar : MonoBehaviour {
     slider.value -= 20;
   }
 
+  private void MinigameCheck() {
+    if (J_IsHappy.Value == true) {
+      slider.value += 20;
+      J_IsHappy.Value = false;
+    }
+
+    if (T_IsHappy.Value == true) {
+      slider.value += 20;
+      T_IsHappy.Value = false;
+    }
+
+    if (F_IsHappy.Value == true) {
+      slider.value += 20;
+      F_IsHappy.Value = false;
+    }
+  }
+
+  private void ValueCheck() {
+    if(slider.value >= 70) {
+      faceImage.GetComponent<Image>().sprite = blobs[0];
+    }
+    else if(slider.value <= 30) {
+      faceImage.GetComponent<Image>().sprite = blobs[1];
+    }
+    else {
+      faceImage.GetComponent<Image>().sprite = blobs[2];
+    }
+  }
 
 
 }
