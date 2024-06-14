@@ -7,7 +7,7 @@ public class HappyBar : MonoBehaviour {
 
   public Slider slider;
   private float LastDecrease; //variable to keep track of time passed
-  [SerializeField] private float decreaseDelay = 10f; //the delay between spawning of objects
+  [SerializeField] private float decreaseDelay = 10f; 
 
   [SerializeField] private BoolSO J_IsHappy;
   [SerializeField] private BoolSO T_IsHappy;
@@ -17,13 +17,13 @@ public class HappyBar : MonoBehaviour {
   [SerializeField] private List<Sprite> blobs = new List<Sprite>();  
 
   void Start() {
-    LastDecrease = Time.time; //set last spawn time to current time to keep track
+    LastDecrease = Time.time; 
   }
 
   void Update() {
     if (Time.time - LastDecrease >= decreaseDelay) {
       slider.value -= 1;
-      LastDecrease = Time.time; //set last spawn time to current time to keep track from this point on again
+      LastDecrease = Time.time; //set last time to current time to keep track of time
     }
 
     ValueCheck();

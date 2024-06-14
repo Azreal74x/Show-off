@@ -23,7 +23,7 @@ public class ShowScore : MonoBehaviour
         score.text = scoreText + scoreKeeper.CurrentScoreValue.ToString();
         highscore.text = highscoreText + scoreKeeper.HighScoreValue.ToString();
 
-        if(scoreKeeper.CurrentScoreValue == scoreKeeper.HighScoreValue)
+        if(scoreKeeper.HighScoreValue != 0 && scoreKeeper.CurrentScoreValue == scoreKeeper.HighScoreValue) 
         {
             images[0].SetActive(false);
             images[1].SetActive(true);

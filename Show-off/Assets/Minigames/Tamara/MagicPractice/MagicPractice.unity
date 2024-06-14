@@ -3964,15 +3964,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: Score
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6c3719cd4b68147489cf5ba7b4337ae0, type: 2}
+  m_sharedMaterial: {fileID: -8027070008128254699, guid: 6c3719cd4b68147489cf5ba7b4337ae0,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3989,13 +3990,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4456,11 +4457,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8571189177937655240, guid: 3fafba72b57a2fc4c9402180c152908d,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 421720502}
+      addedObject: {fileID: 421720501}
     - targetCorrespondingSourceObject: {fileID: 8571189177937655240, guid: 3fafba72b57a2fc4c9402180c152908d,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 421720501}
+      addedObject: {fileID: 421720504}
+    - targetCorrespondingSourceObject: {fileID: 8571189177937655240, guid: 3fafba72b57a2fc4c9402180c152908d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 421720505}
   m_SourcePrefab: {fileID: 100100000, guid: 3fafba72b57a2fc4c9402180c152908d, type: 3}
 --- !u!1 &421720500 stripped
 GameObject:
@@ -4489,7 +4494,13 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2830474, y: 4.1826296, z: 3.035055}
   m_Center: {x: 0.040787026, y: -0.56, z: 0.020445187}
---- !u!114 &421720502
+--- !u!4 &421720503 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9059319995914596210, guid: 3fafba72b57a2fc4c9402180c152908d,
+    type: 3}
+  m_PrefabInstance: {fileID: 421720499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &421720504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4498,18 +4509,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 421720500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0335803ac492f074f93904ac7e6d5240, type: 3}
+  m_Script: {fileID: 11500000, guid: d2ce51ed4e9d73e459d9360cfe00bc9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  happinessBar: {fileID: 0}
-  petSounds: []
-  soundDelay: 1
---- !u!4 &421720503 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9059319995914596210, guid: 3fafba72b57a2fc4c9402180c152908d,
-    type: 3}
-  m_PrefabInstance: {fileID: 421720499}
+  scoreText: {fileID: 394449228}
+  score: 0
+  canMove: 1
+  timerScript: {fileID: 421720505}
+  timeIncrease: 10
+  timeDecrease: 5
+--- !u!114 &421720505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421720500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f761e6d016e3fa49a031087ec41da51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdown: 20
+  timeText: {fileID: 1439877882}
+  T_isHappy: {fileID: 11400000, guid: 61dc010cf6aa78b45af0898571d72f64, type: 2}
+  scoreKeeperSO: {fileID: 11400000, guid: 116693193f25c9243a8f92310e956e3d, type: 2}
+  buttonScripts: {fileID: 1856423593}
 --- !u!1001 &421933640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13628,15 +13653,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: Time
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6c3719cd4b68147489cf5ba7b4337ae0, type: 2}
+  m_sharedMaterial: {fileID: -8027070008128254699, guid: 6c3719cd4b68147489cf5ba7b4337ae0,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13653,13 +13679,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -16295,6 +16321,9 @@ MonoBehaviour:
   scoreText: {fileID: 394449228}
   score: 0
   canMove: 1
+  timerScript: {fileID: 0}
+  timeIncrease: 10
+  timeDecrease: 5
 --- !u!114 &1856423592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16310,7 +16339,6 @@ MonoBehaviour:
   countdown: 60
   timeText: {fileID: 1439877882}
   T_isHappy: {fileID: 11400000, guid: 61dc010cf6aa78b45af0898571d72f64, type: 2}
-  houseTamaraButton: {fileID: 1120314740}
   scoreKeeperSO: {fileID: 11400000, guid: 116693193f25c9243a8f92310e956e3d, type: 2}
   buttonScripts: {fileID: 1856423593}
 --- !u!114 &1856423593
@@ -17594,7 +17622,7 @@ Transform:
   m_GameObject: {fileID: 1985361622}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.352, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
