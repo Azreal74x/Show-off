@@ -332,6 +332,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1659554722811766078, guid: 70363eca3ef137a4e9b6a5424094408c,
+        type: 3}
+      propertyPath: m_Name
+      value: happiness bar old
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659554722811766078, guid: 70363eca3ef137a4e9b6a5424094408c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1797435560034131819, guid: 70363eca3ef137a4e9b6a5424094408c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -480,7 +490,7 @@ PrefabInstance:
     - target: {fileID: 5298993726789386018, guid: 70363eca3ef137a4e9b6a5424094408c,
         type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5298993726789386018, guid: 70363eca3ef137a4e9b6a5424094408c,
         type: 3}
