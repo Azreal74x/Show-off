@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class F_Lives : MonoBehaviour {
   [SerializeField] public int lives = 5;
-  [SerializeField] BoolSO F_IsHappy;
+  //[SerializeField] BoolSO F_IsHappy;
 
   void Start() {
 
@@ -17,7 +17,7 @@ public class F_Lives : MonoBehaviour {
 
       Debug.Log("GAMEOVER");
 
-      F_IsHappy.Value = true;
+      //F_IsHappy.Value = true;
     }
   }
 
