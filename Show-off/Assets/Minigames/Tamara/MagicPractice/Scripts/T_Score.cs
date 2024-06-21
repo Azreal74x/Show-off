@@ -9,6 +9,11 @@ public class T_Score : MonoBehaviour {
   public float score;
   public bool canMove = true; //bool to keep track of pulling activity
 
+  public T_Timer timerScript;
+  [SerializeField] private float timeIncrease = 10f;
+  [SerializeField] private float timeDecrease = 5f;
+
+
   private void Start() {
     scoreText.text = score.ToString(); //set score text
   }
@@ -22,10 +27,13 @@ public class T_Score : MonoBehaviour {
       if (collision.gameObject.tag == "GoodCandy") { //startDelay if the collision was with a gold by checking the tag
         score += 1; //update score
         scoreText.text = score.ToString(); //update score text
+
+        timerScript.countdown += timeIncrease;
         
         canMove = true;
       }
       else if (collision.gameObject.tag == "BadCandy") { //startDelay if the collision was with a stone by checking the tag
+        timerScript.countdown -= timeDecrease;
         canMove = true;
       }
     }

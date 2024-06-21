@@ -22,11 +22,8 @@ public class ButtonScripts : MonoBehaviour {
 
 
 
-  [SerializeField] private AudioClip buttonClickSound;
-  private AudioSource audioSource;
-
   void Start() {
-    audioSource = GetComponent<AudioSource>();
+  
   }
 
   void Update() {
@@ -113,12 +110,5 @@ public class ButtonScripts : MonoBehaviour {
     }
 
   }
-
-  public void PlayButtonSound() {
-    audioSource.clip = buttonClickSound;
-    audioSource.Play();
-  }
-
-
 
 }

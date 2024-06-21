@@ -13,12 +13,10 @@ public class Raycasting : MonoBehaviour {
 
   public ButtonScripts buttons;
 
-  [SerializeField] private AudioClip houseClickSound;
-  private AudioSource audioSource;
+  [SerializeField] private SoundManager soundManager;
 
   void Start() {
-    audioSource = GetComponent<AudioSource>();
-    audioSource.clip = houseClickSound;
+
   }
 
   void Update() {
@@ -31,17 +29,17 @@ public class Raycasting : MonoBehaviour {
 
 
         if (hit.collider.gameObject.name == F_house) {
-          audioSource.Play();
+          soundManager.PlayHouseClickSound();
 
           buttons.F_LoadHouse();
         }
         else if (hit.collider.gameObject.name == T_house) {
-          audioSource.Play();
+          soundManager.PlayHouseClickSound();
 
           buttons.T_LoadHouse();
         }
         else if (hit.collider.gameObject.name == J_house) {
-          audioSource.Play();
+          soundManager.PlayHouseClickSound();
 
           buttons.J_LoadHouse();
         }

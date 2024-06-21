@@ -17,6 +17,8 @@ public class T_BulletSpawner : MonoBehaviour {
   [SerializeField] GameObject player; //reference to Player obj
   T_Score scoreBehaviour; //reference to ScoreBehaviour script
 
+  [SerializeField] SoundManager soundManager;
+
   private void Start() {
     aimTimer = 0f;
 
@@ -27,6 +29,7 @@ public class T_BulletSpawner : MonoBehaviour {
     if (Input.GetMouseButtonDown(0) && scoreBehaviour.canMove) { //if left mouse click
       instantiatePrefab = Instantiate(bullet, bulletSpawner.transform.position, transform.rotation, bulletParent); //spawn bullet in the bulletParent obj    
       scoreBehaviour.canMove = false;
+      soundManager.PlayT_BeamSound();
     }
   }
 

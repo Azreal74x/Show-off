@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BackgroundMusic : MonoBehaviour
+{
+  public static BackgroundMusic instance;
+
+  void Awake() {
+    if (instance != null)
+      Destroy(gameObject);
+    else {
+      instance = this;
+      DontDestroyOnLoad(this.gameObject);
+    }
+  }
+
+  //BackgroundMusic.instance.GetComponent<AudioSource>().Pause();
+  //BackgroundMusic.instance.GetComponent<AudioSource>().Play();
+}

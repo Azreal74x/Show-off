@@ -9,6 +9,9 @@ TagManager:
   - BadCandy
   - GoodCandy
   - Hoop
+  - Furbie
+  - Jemie
+  - Tamara
   layers:
   - Default
   - TransparentFX
@@ -18,7 +21,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Food
   - Houses
   - 
   - 

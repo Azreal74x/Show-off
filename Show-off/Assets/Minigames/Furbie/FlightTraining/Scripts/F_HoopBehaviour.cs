@@ -22,7 +22,7 @@ public class F_HoopBehaviour : MonoBehaviour
     //  timer
     private float lastTime;
 
-    static bool debugging = true;
+    static bool debugging = false;
 
     void Start()
     {
@@ -66,7 +66,8 @@ public class F_HoopBehaviour : MonoBehaviour
 
             if (hit == false && debugging == false)
             {
-                other.gameObject.GetComponent<F_Lives>().lives--;
+                other.gameObject.GetComponent<F_Lives>().DecreaseLives();
+                //other.gameObject.GetComponent<F_Lives>().lives--;
             }
 
 
