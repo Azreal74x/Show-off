@@ -749,7 +749,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -759,8 +759,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 124db1fd2829bd04fbc1a3396c4d29ba,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 124db1fd2829bd04fbc1a3396c4d29ba, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -820,7 +821,6 @@ MonoBehaviour:
   F_gameover: 
   J_gameover: 
   T_gameover: 
-  buttonClickSound: {fileID: 8300000, guid: b50e8082a783e55408a97e3a3c27e5d2, type: 3}
 --- !u!82 &3664542324151136006
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1049,7 +1049,6 @@ MonoBehaviour:
   F_gameover: F_GameOver
   J_gameover: J_GameOver
   T_gameover: T_GameOver
-  buttonClickSound: {fileID: 8300000, guid: b50e8082a783e55408a97e3a3c27e5d2, type: 3}
 --- !u!82 &2363725389830212858
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1353,6 +1352,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 77ae3addd7de54b489076c01f333bfed, type: 3}
   - {fileID: 21300000, guid: f188b7f965779794486c45e9b6e3ffa3, type: 3}
   - {fileID: 21300000, guid: 0b5173978216bae42bb54df7c0670562, type: 3}
+  soundManager: {fileID: 0}
 --- !u!1 &1839108756256902063
 GameObject:
   m_ObjectHideFlags: 0

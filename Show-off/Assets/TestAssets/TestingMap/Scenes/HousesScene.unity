@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: c5b0d487bc0707d4992d7fbfc49372ef,
+    type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -4146,7 +4147,6 @@ MonoBehaviour:
   F_gameover: F_GameOver
   J_gameover: J_GameOver
   T_gameover: T_GameOver
-  buttonClickSound: {fileID: 0}
 --- !u!1 &343420082
 GameObject:
   m_ObjectHideFlags: 0

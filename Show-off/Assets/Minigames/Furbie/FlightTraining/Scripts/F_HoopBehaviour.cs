@@ -24,9 +24,15 @@ public class F_HoopBehaviour : MonoBehaviour
 
     static bool debugging = false;
 
+    [SerializeField]  private bool decreasedLife = false;
+
+    //  particles
+    [SerializeField] GameObject particles;
+    private ParticleSystem partSyst;
+
     void Start()
     {
-
+        partSyst = particles.GetComponent<ParticleSystem>();
 
         lastTime = Time.time;
     }
@@ -64,9 +70,10 @@ public class F_HoopBehaviour : MonoBehaviour
         if (other.gameObject.name == "Cube")
         {
 
-            if (hit == false && debugging == false)
+            if (hit == false && debugging == false && decreasedLife == false)
             {
                 other.gameObject.GetComponent<F_Lives>().DecreaseLives();
+                decreasedLife = true;
                 //other.gameObject.GetComponent<F_Lives>().lives--;
             }
 
@@ -81,9 +88,10 @@ public class F_HoopBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("collision with player");
-
             hit = true;
+            partSyst.Play();
+
+            Debug.Log("collision with player");
 
         }
 

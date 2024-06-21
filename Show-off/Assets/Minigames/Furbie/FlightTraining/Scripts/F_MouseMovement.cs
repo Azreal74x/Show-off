@@ -25,7 +25,7 @@ public class F_MouseMovement : MonoBehaviour
 
     void Start()
     {
-        lives = wall.GetComponent<F_Lives>().lives;
+        //lives = wall.GetComponent<F_Lives>().lives;
     }
 
     void Update()
@@ -59,12 +59,17 @@ public class F_MouseMovement : MonoBehaviour
 
         }
 
+        
+
         CheckLives();
 
     }
 
     void CheckLives()
     {
+        //  CHANGE THISSSS
+        lives = wall.GetComponent<F_Lives>().lives;
+
         if (lives <= 0)
         {
             lives = -1;
