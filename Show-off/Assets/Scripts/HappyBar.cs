@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,17 +8,20 @@ public class HappyBar : MonoBehaviour {
 
   public Slider slider;
   private float LastDecrease; //variable to keep track of time passed
-  [SerializeField] private float decreaseDelay = 10f; 
+  [SerializeField] private float decreaseDelay = 10f;
 
   [SerializeField] private BoolSO J_IsHappy;
   [SerializeField] private BoolSO T_IsHappy;
   [SerializeField] private BoolSO F_IsHappy;
 
   [SerializeField] private GameObject faceImage;
-  [SerializeField] private List<Sprite> blobs = new List<Sprite>();  
+  [SerializeField] private List<Sprite> blobs = new List<Sprite>();
+
+  [SerializeField] private SoundManager soundManager;
+  private bool isPlaying = false;
 
   void Start() {
-    LastDecrease = Time.time; 
+    LastDecrease = Time.time;
   }
 
   void Update() {
@@ -59,14 +63,22 @@ public class HappyBar : MonoBehaviour {
   }
 
   private void ValueCheck() {
-    if(slider.value >= 70) {
-      faceImage.GetComponent<Image>().sprite = blobs[0];
+    if (slider.value >= 70) {
+      faceImage.GetComponent<Image>().sprite = blobs[0]; //happy blob
+      soundManager.StopSadMonsterRainSound();
+      isPlaying = false;
     }
-    else if(slider.value <= 30) {
-      faceImage.GetComponent<Image>().sprite = blobs[1];
+    else if (slider.value <= 30) {
+      faceImage.GetComponent<Image>().sprite = blobs[1]; //sad blob
+      if (!isPlaying) {
+        soundManager.PlaySadMonsterRainSound();
+        isPlaying = true;
+      }
     }
     else {
-      faceImage.GetComponent<Image>().sprite = blobs[2];
+      faceImage.GetComponent<Image>().sprite = blobs[2]; //mid blob
+      soundManager.StopSadMonsterRainSound();
+      isPlaying = false;
     }
   }
 
