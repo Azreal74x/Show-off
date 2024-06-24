@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6118dfc4c1d17c1499f90c851178e69e,
         type: 3}
       propertyPath: m_Name
-      value: caaatt 2
+      value: Furbie
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
