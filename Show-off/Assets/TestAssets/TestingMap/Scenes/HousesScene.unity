@@ -7792,6 +7792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 855544554}
   - component: {fileID: 855544555}
+  - component: {fileID: 855544556}
   m_Layer: 9
   m_Name: HouseTamara
   m_TagString: Untagged
@@ -7836,6 +7837,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.1105037, y: 3.8056712, z: 5.3469534}
   m_Center: {x: -0.27835107, y: 2.0084913, z: 0.25020123}
+--- !u!114 &855544556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855544553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82fd66e8ec644464e825cca0903d809f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &866338746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10296,6 +10309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1244805539}
   - component: {fileID: 1244805540}
+  - component: {fileID: 1244805541}
   m_Layer: 9
   m_Name: HouseFurbie
   m_TagString: Untagged
@@ -10340,6 +10354,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.116234, y: 4.877449, z: 4.176046}
   m_Center: {x: -0.060198784, y: 3.1394343, z: -0.5619929}
+--- !u!114 &1244805541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244805538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82fd66e8ec644464e825cca0903d809f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1247567532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15695,6 +15721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1956100335}
   - component: {fileID: 1956100336}
+  - component: {fileID: 1956100337}
   m_Layer: 9
   m_Name: HouseJemie
   m_TagString: Untagged
@@ -15739,6 +15766,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.5308704, y: 4.2887816, z: 5.781747}
   m_Center: {x: -0.026571274, y: 2.6334732, z: 1.244144}
+--- !u!114 &1956100337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956100334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82fd66e8ec644464e825cca0903d809f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1957290802
 PrefabInstance:
   m_ObjectHideFlags: 0

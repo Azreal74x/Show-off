@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-[RequireComponent(typeof(Collider))]
+/*[RequireComponent(typeof(Collider))]*/
 
 public class Clickable : MonoBehaviour
 {
