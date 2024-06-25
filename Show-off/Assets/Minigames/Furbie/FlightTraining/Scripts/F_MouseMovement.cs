@@ -105,6 +105,9 @@ public class F_MouseMovement : MonoBehaviour {
     this.gameObject.GetComponent<Rigidbody>().useGravity = true;
     canmove = false;
 
+    //yield return new WaitForSeconds(0.8f);
+    //soundManager.PlayGameEndSound();
+
     yield return new WaitForSeconds(2);
 
     FurbieDied();
