@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7affebb7fa67f5b49be89587533f75e8,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.125
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7affebb7fa67f5b49be89587533f75e8,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.125
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7affebb7fa67f5b49be89587533f75e8,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.125
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7affebb7fa67f5b49be89587533f75e8,
         type: 3}
@@ -86,7 +86,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7affebb7fa67f5b49be89587533f75e8,
         type: 3}
       propertyPath: m_Name
-      value: macaroon 1
+      value: macaroon
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7affebb7fa67f5b49be89587533f75e8,
         type: 3}

@@ -20,14 +20,7 @@ public class F_Lives : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (lives <= 0 )
-        {
-            lives = -1;
-            
-            Debug.Log("GAMEOVER");
-
-            //F_IsHappy.Value = true;
-        }*/
+        
     }
 
     public void DecreaseLives()
@@ -35,14 +28,12 @@ public class F_Lives : MonoBehaviour
         if (lives > 0)
         {
             lives--;
-            Debug.Log(lives);
 
             for (int i = heartsObj.Count - 1; i >= 0; i--)
             {
                 if (heartsObj[i].GetComponent<Image>().sprite == heartsImg[0])
                 {
                     heartsObj[i].GetComponent<Image>().sprite = heartsImg[1];
-                    Debug.Log("changed " + i + " from the back");
                     return;
                 }
 

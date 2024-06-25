@@ -13,6 +13,7 @@ public class T_Score : MonoBehaviour {
   [SerializeField] private float timeIncrease = 10f;
   [SerializeField] private float timeDecrease = 5f;
 
+  [SerializeField] SoundManager soundManager;
 
   private void Start() {
     scoreText.text = score.ToString(); //set score text
@@ -25,6 +26,7 @@ public class T_Score : MonoBehaviour {
   private void OnCollisionEnter(Collision collision) { //method for collision checking
     if (collision != null) { //if we collided with anything (we = the object this script is attached to)
       if (collision.gameObject.tag == "GoodCandy") { //startDelay if the collision was with a gold by checking the tag
+        soundManager.PlayT_GoodCandySound();
         score += 1; //update score
         scoreText.text = score.ToString(); //update score text
 
@@ -33,6 +35,7 @@ public class T_Score : MonoBehaviour {
         canMove = true;
       }
       else if (collision.gameObject.tag == "BadCandy") { //startDelay if the collision was with a stone by checking the tag
+        soundManager.PlayT_BadCandySound();
         timerScript.countdown -= timeDecrease;
         canMove = true;
       }

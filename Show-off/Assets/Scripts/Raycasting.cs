@@ -29,17 +29,17 @@ public class Raycasting : MonoBehaviour {
 
 
         if (hit.collider.gameObject.name == F_house) {
-          soundManager.PlayHouseClickSound();
+          soundManager.PlayClickSound();
 
           buttons.F_LoadHouse();
         }
         else if (hit.collider.gameObject.name == T_house) {
-          soundManager.PlayHouseClickSound();
+          soundManager.PlayClickSound();
 
           buttons.T_LoadHouse();
         }
         else if (hit.collider.gameObject.name == J_house) {
-          soundManager.PlayHouseClickSound();
+          soundManager.PlayClickSound();
 
           buttons.J_LoadHouse();
         }

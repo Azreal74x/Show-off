@@ -45,25 +45,7 @@ public class F_HoopBehaviour : MonoBehaviour
         //CheckLives();
     }
 
-    /*private void CheckLives()
-    {
-        if (lives == 0)
-        {
-            lives = -1;
-
-            Debug.Log("GAMEOVER");
-            F_ObjectSpawner spawner = GetComponentInParent<F_ObjectSpawner>();
-
-            spawner.GetComponent<F_Showtext>().enabled = true;
-
-            for (var i = spawner.transform.childCount - 1; i >= 0; i--)
-            {
-                Object.Destroy(spawner.transform.GetChild(i).gameObject);
-            }
-            spawner.enabled = false;
-
-        }
-    }*/
+   
 
     private void OnCollisionEnter(Collision other)
     {
@@ -78,7 +60,7 @@ public class F_HoopBehaviour : MonoBehaviour
             }
 
 
-            Destroy(gameObject);
+      Destroy(gameObject);
         }
 
 
@@ -91,7 +73,6 @@ public class F_HoopBehaviour : MonoBehaviour
             hit = true;
             partSyst.Play();
 
-            Debug.Log("collision with player");
 
         }
 

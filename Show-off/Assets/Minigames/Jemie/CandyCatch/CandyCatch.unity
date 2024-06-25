@@ -487,6 +487,8 @@ MonoBehaviour:
   houseJemieButton: {fileID: 988576943}
   buttonScripts: {fileID: 1138271154}
   soundManager: {fileID: 1064817349}
+  heartsObj: []
+  heartsImg: []
 --- !u!1 &85178443
 GameObject:
   m_ObjectHideFlags: 0
@@ -4370,16 +4372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d279fae5deb0f349b07643afa7b9802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 70266939}
-  heartsObj:
-  - {fileID: 1564095248}
-  - {fileID: 1730949137}
-  - {fileID: 2068694250}
-  - {fileID: 468250821}
-  - {fileID: 390525467}
-  heartsImg:
-  - {fileID: 21300000, guid: 24961ff700cdf9342a06449af7f7076f, type: 3}
-  - {fileID: 21300000, guid: c76353d9354abed438a8fbb10a2de80d, type: 3}
+  player: {fileID: 1230581205}
 --- !u!1001 &857321013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5610,22 +5603,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f4f5adee402b743872017cebd877a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonClickSound: {fileID: 8300000, guid: e22156b6f731a224986444b7dc54996a, type: 3}
-  houseClickSound: {fileID: 8300000, guid: 0903d63b4001a7141bf444f364e56337, type: 3}
-  sadMonsterRainSound: {fileID: 8300000, guid: c74461ce599982944ae150ab54d13681, type: 3}
-  F_WooshSound: {fileID: 8300000, guid: 1ca46126a87e8ae4ebbfceaa3913a1af, type: 3}
-  J_candyCatchSound: {fileID: 8300000, guid: e8d04cb219aee7f409b2134105e29af7, type: 3}
-  T_BeamSound: {fileID: 8300000, guid: cc4c475d00564234fab308d85bd2f213, type: 3}
-  F_PettingSound: {fileID: 8300000, guid: cf4a5b23ca43a6147b90ef17d9a078c8, type: 3}
-  J_PettingSound: {fileID: 8300000, guid: 7cf7b4b9ee1b84d4eb87a040ef5e546a, type: 3}
-  T_PettingSounds:
-  - {fileID: 8300000, guid: 12b65965fc6cecd43b630d613e3e9373, type: 3}
-  - {fileID: 8300000, guid: 87da3eec7c3577640869e446b5b7f6c4, type: 3}
-  - {fileID: 8300000, guid: fac8b3e39fda84940b083db645c39ed8, type: 3}
-  F_MunchingSound: {fileID: 8300000, guid: f163c37f8617f0d458175e4156b6ddca, type: 3}
-  J_MunchingSound: {fileID: 8300000, guid: fcaabc00a9f70424caf114753dfbbc06, type: 3}
-  T_MunchingSound: {fileID: 8300000, guid: 257aeccd10547084c8b67b331f44d1bc, type: 3}
-  J_YummyCandySound: {fileID: 8300000, guid: 6eec1abeb742a4e46b053f9a6d42f366, type: 3}
+  clickSound: {fileID: 8300000, guid: 58e21a9a5ec75b6479e49880c685288b, type: 3}
+  changeObjectSound: {fileID: 8300000, guid: f354e8d3c2ae6964292e4afdfe0bc36c, type: 3}
+  gameEndSound: {fileID: 8300000, guid: a8dd717b992dba04685bb651a5588406, type: 3}
+  tryAgainSound: {fileID: 8300000, guid: 7a8076c3c24d3304585a64319abc1b5b, type: 3}
+  highscoreSound: {fileID: 8300000, guid: 75c9fc448dd02fa47bcb36460dd9a0a4, type: 3}
+  F_hittingHoopSound: {fileID: 8300000, guid: 196cca4e53c560247b6c0050c5e2a38b, type: 3}
+  F_flyThroughHoopSound: {fileID: 8300000, guid: ccc08b51d8e88c74eb4a3eaa5800ba28,
+    type: 3}
+  J_goodCandyCatchSound: {fileID: 8300000, guid: 48a357a5040b9344282df1d3e3f9ded4,
+    type: 3}
+  J_badCandyCatchSound: {fileID: 8300000, guid: fc27fab8da265c941a9ad9f9785faf92,
+    type: 3}
+  T_goodCandySound: {fileID: 8300000, guid: 71c3130cd6a3b3242855bb5b10835ad7, type: 3}
+  T_badCandySound: {fileID: 8300000, guid: 477719d2b202e6448b369c27b671b887, type: 3}
+  T_beamSound: {fileID: 8300000, guid: 18571a08ff5699d4f8639fd98108119d, type: 3}
+  F_pettingSounds:
+  - {fileID: 8300000, guid: cd3ca655f8ea21a4ca4e04f48e6873dd, type: 3}
+  - {fileID: 8300000, guid: 9d014614988606448bebd3fb7f502c1f, type: 3}
+  - {fileID: 8300000, guid: fec75f2ed94c4a541802eb8c262246b3, type: 3}
+  J_pettingSounds:
+  - {fileID: 8300000, guid: a7a2cc72d1f83a84ba56dd91e0217d8a, type: 3}
+  - {fileID: 8300000, guid: 647d20cad8174f944ae12b659876ccc6, type: 3}
+  - {fileID: 8300000, guid: 888d03984e1694a47b993ce2079c53bc, type: 3}
+  T_pettingSounds:
+  - {fileID: 8300000, guid: 7104c2c3755138c44b5048e4b75c8e1b, type: 3}
+  - {fileID: 8300000, guid: f151c4fe8218e5343bd6d4bdb1e6682a, type: 3}
+  - {fileID: 8300000, guid: 2447bd4c3c1ac6848a215e5b3ae4bc18, type: 3}
+  F_goodMunchingSound: {fileID: 8300000, guid: 92021387a0cfbb345ba9f92cae361877, type: 3}
+  J_goodMunchingSound: {fileID: 8300000, guid: fa66191baf5ee874f82f21e43d272cd4, type: 3}
+  T_goodMunchingSound: {fileID: 8300000, guid: 35f2ab6e3364dad48ae52eb62d6b9fe4, type: 3}
+  F_badMunchingSound: {fileID: 8300000, guid: a83b1bee04bcde94cb90e60cccbb4a72, type: 3}
+  J_badMunchingSound: {fileID: 8300000, guid: 459cc600b76b3794cafbc24efddb3d90, type: 3}
+  T_badMunchingSound: {fileID: 8300000, guid: feca0ba283437e7478efe7a5f77104c7, type: 3}
+  J_yummyCandySound: {fileID: 8300000, guid: 7d338da78169def45ad8175d4bed7564, type: 3}
 --- !u!4 &1064817350
 Transform:
   m_ObjectHideFlags: 0
@@ -6027,6 +6038,8 @@ MonoBehaviour:
   houseJemieButton: {fileID: 988576943}
   buttonScripts: {fileID: 1138271154}
   soundManager: {fileID: 0}
+  heartsObj: []
+  heartsImg: []
 --- !u!114 &1138271154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6380,8 +6393,17 @@ MonoBehaviour:
   lostCandy: 0
   J_IsHappy: {fileID: 11400000, guid: 03a8a7a21b0c7ec4db94009764ddc525, type: 2}
   houseJemieButton: {fileID: 988576943}
-  buttonScripts: {fileID: 1138271154}
+  buttonScripts: {fileID: 1230581208}
   soundManager: {fileID: 1064817349}
+  heartsObj:
+  - {fileID: 1564095248}
+  - {fileID: 1730949137}
+  - {fileID: 2068694250}
+  - {fileID: 468250821}
+  - {fileID: 390525467}
+  heartsImg:
+  - {fileID: 21300000, guid: 24961ff700cdf9342a06449af7f7076f, type: 3}
+  - {fileID: 21300000, guid: c76353d9354abed438a8fbb10a2de80d, type: 3}
 --- !u!1 &1237363231
 GameObject:
   m_ObjectHideFlags: 0
@@ -6428,6 +6450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Jester Pose bopping
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072493801694873772, guid: e1ddb0579a3b3e34f9445e26bb8b9509,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5081892437904985837, guid: e1ddb0579a3b3e34f9445e26bb8b9509,
         type: 3}
@@ -10526,6 +10553,7 @@ MonoBehaviour:
   - {fileID: 1163115406408577041, guid: e1e282b8bb260d24c8a789148ef46064, type: 3}
   - {fileID: 6712431710584675378, guid: fa0a07a67cdd9bf40ae746ed75ee6ad9, type: 3}
   - {fileID: 1398762421150022950, guid: 0c3a82fd86dc52b4db3a6b923b82be05, type: 3}
+  - {fileID: 8459431778046710375, guid: cb1b3fe90e6a90240a797ead728528b6, type: 3}
   delay: 0
   spawnDecreaseSpeed: 0.04
   minDelay: 0.4
