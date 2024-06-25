@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class BackgroundMusic : MonoBehaviour
-{
+public class BackgroundMusic : MonoBehaviour {
   public static BackgroundMusic instance;
 
-  void Awake() {
+  private void Awake() {
     if (instance != null)
       Destroy(gameObject);
     else {
@@ -15,6 +15,15 @@ public class BackgroundMusic : MonoBehaviour
     }
   }
 
-  //BackgroundMusic.instance.GetComponent<AudioSource>().Pause();
-  //BackgroundMusic.instance.GetComponent<AudioSource>().Play();
+  private void Update() {
+    if (SceneManager.GetActiveScene().name == "FlightTraining" || SceneManager.GetActiveScene().name == "CandyCatch" || SceneManager.GetActiveScene().name == "MagicPractice") {
+      BackgroundMusic.instance.GetComponent<AudioSource>().Pause();
+    }
+    else {
+      if (!BackgroundMusic.instance.GetComponent<AudioSource>().isPlaying)
+        BackgroundMusic.instance.GetComponent<AudioSource>().Play();
+    }
+  }
 }
+
+
