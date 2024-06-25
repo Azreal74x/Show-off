@@ -17,9 +17,6 @@ public class HappyBar : MonoBehaviour {
   [SerializeField] private GameObject faceImage;
   [SerializeField] private List<Sprite> blobs = new List<Sprite>();
 
-  [SerializeField] private SoundManager soundManager;
-  private bool isPlaying = false;
-
   void Start() {
     LastDecrease = Time.time;
   }
@@ -65,20 +62,12 @@ public class HappyBar : MonoBehaviour {
   private void ValueCheck() {
     if (slider.value >= 70) {
       faceImage.GetComponent<Image>().sprite = blobs[0]; //happy blob
-      soundManager.StopSadMonsterRainSound();
-      isPlaying = false;
     }
     else if (slider.value <= 30) {
       faceImage.GetComponent<Image>().sprite = blobs[1]; //sad blob
-      if (!isPlaying) {
-        soundManager.PlaySadMonsterRainSound();
-        isPlaying = true;
-      }
     }
     else {
       faceImage.GetComponent<Image>().sprite = blobs[2]; //mid blob
-      soundManager.StopSadMonsterRainSound();
-      isPlaying = false;
     }
   }
 

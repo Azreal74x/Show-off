@@ -44,7 +44,7 @@ public class J_CandySpawner : MonoBehaviour {
       int randomObjectPrefab = Random.Range(0, objectsPrefabs.Count); //get random object from the prefabs list
       int randomSpawnPoint = Random.Range(0, spawnPoints.Count); //get random spawnpoint from the spawnpoints list
       //int randomMaterial = Random.Range(0, materials.Count); //get random material from the materials list
-      instantiatePrefab = Instantiate(objectsPrefabs[randomObjectPrefab], spawnPoints[randomSpawnPoint].transform.position, transform.rotation, transform); //instantiate the random object at random spawnpoint with current parent rotation as a child of what this script is attached to
+      instantiatePrefab = Instantiate(objectsPrefabs[randomObjectPrefab], spawnPoints[randomSpawnPoint].transform.position, objectsPrefabs[randomObjectPrefab].transform.rotation, transform); //instantiate the random object at random spawnpoint with current parent rotation as a child of what this script is attached to
       //instantiatePrefab.GetComponent<Renderer>().material = materials[randomMaterial]; //assign material to the newly created object
       instantiatePrefab.GetComponent<J_Candy>().fallSpeed = fallSpeed;
       lastSpawnTime = Time.time; //set last spawn time to current time to keep track from this point on again

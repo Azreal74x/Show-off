@@ -24,9 +24,15 @@ public class F_HoopBehaviour : MonoBehaviour
 
     static bool debugging = false;
 
+    [SerializeField]  private bool decreasedLife = false;
+
+    //  particles
+    [SerializeField] GameObject particles;
+    private ParticleSystem partSyst;
+
     void Start()
     {
-
+        partSyst = particles.GetComponent<ParticleSystem>();
 
         lastTime = Time.time;
     }
@@ -39,39 +45,22 @@ public class F_HoopBehaviour : MonoBehaviour
         //CheckLives();
     }
 
-    /*private void CheckLives()
-    {
-        if (lives == 0)
-        {
-            lives = -1;
-
-            Debug.Log("GAMEOVER");
-            F_ObjectSpawner spawner = GetComponentInParent<F_ObjectSpawner>();
-
-            spawner.GetComponent<F_Showtext>().enabled = true;
-
-            for (var i = spawner.transform.childCount - 1; i >= 0; i--)
-            {
-                Object.Destroy(spawner.transform.GetChild(i).gameObject);
-            }
-            spawner.enabled = false;
-
-        }
-    }*/
+   
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.name == "Cube")
         {
 
-            if (hit == false && debugging == false)
+            if (hit == false && debugging == false && decreasedLife == false)
             {
                 other.gameObject.GetComponent<F_Lives>().DecreaseLives();
+                decreasedLife = true;
                 //other.gameObject.GetComponent<F_Lives>().lives--;
             }
 
 
-            Destroy(gameObject);
+      Destroy(gameObject);
         }
 
 
@@ -81,9 +70,9 @@ public class F_HoopBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("collision with player");
-
             hit = true;
+            partSyst.Play();
+
 
         }
 

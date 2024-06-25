@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class J_Score : MonoBehaviour {
 
@@ -17,6 +18,10 @@ public class J_Score : MonoBehaviour {
 
   [SerializeField] ButtonScripts buttonScripts;
   [SerializeField] SoundManager soundManager;
+
+
+  [SerializeField] public List<GameObject> heartsObj;
+  [SerializeField] private List<Sprite> heartsImg = new List<Sprite>();
 
   private void Start() {
     scoreText.text = score.ToString(); //set score text
@@ -35,6 +40,7 @@ public class J_Score : MonoBehaviour {
 
       buttonScripts.GameOver();
     }
+
   }
 
   private void OnCollisionEnter(Collision collision) { //method for collision checking
@@ -42,12 +48,28 @@ public class J_Score : MonoBehaviour {
       if (collision.gameObject.tag == "GoodCandy") { //startDelay if the collision was with a good candy by checking the tag
         score += 1; //update score
         scoreText.text = score.ToString(); //update score text
-        soundManager.PlayJ_CandyCatchSound();
+        soundManager.PlayJ_GoodCandyCatchSound();
       }
       if (collision.gameObject.tag == "BadCandy") {
+        soundManager.PlayJ_BadCandyCatchSound(); //should be bad candy
+
         lostCandy += 1;
-        soundManager.PlayJ_CandyCatchSound(); //should be bad candy
+
+        RemoveHeart();
+
       }
+    }
+  }
+
+
+  public void RemoveHeart() {
+    for (int i = 0; i < heartsObj.Count; i++) {
+      if (heartsObj[i].GetComponent<Image>().sprite == heartsImg[0]) {
+        heartsObj[i].GetComponent<Image>().sprite = heartsImg[1];
+
+        break;
+      }
+
     }
   }
 }
