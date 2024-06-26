@@ -20,7 +20,7 @@ public class ButtonScripts : MonoBehaviour {
   [SerializeField] private string J_gameover;
   [SerializeField] private string T_gameover;
 
-
+  [SerializeField] private GameObject CatBoard;
 
   void Start() {
   
@@ -28,6 +28,14 @@ public class ButtonScripts : MonoBehaviour {
 
   void Update() {
 
+  }
+
+  public void ShowCatBoard() {
+    CatBoard.SetActive(true);
+  }
+
+  public void HideCatBoard() {
+    CatBoard.SetActive(false);
   }
 
   public void LoadMainHouseScene() {
