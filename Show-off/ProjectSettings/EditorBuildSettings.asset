@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/TestAssets/TestingMap/Scenes/HousesScene.unity
+    path: Assets/Scenes/HousesScene.unity
     guid: 7ee17f87820ecbf4fa4438cf32f3b2fa
   - enabled: 1
-    path: Assets/Houses/RoomsPlaceholder/Scenes/F_House.unity
+    path: Assets/Houses/Rooms/Scenes/F_House.unity
     guid: 46406d63ec245dc4ebe44d5793a98856
   - enabled: 1
     path: Assets/Minigames/Furbie/FlightTraining/FlightTraining.unity
@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Minigames/Furbie/FlightTraining/F_GameOver.unity
     guid: 82bb098e2902a3040aaca773b3369d1d
   - enabled: 1
-    path: Assets/Houses/RoomsPlaceholder/Scenes/J_House.unity
+    path: Assets/Houses/Rooms/Scenes/J_House.unity
     guid: e56f89ac309489d4eb4d6748d4fd9a6e
   - enabled: 1
     path: Assets/Minigames/Jemie/CandyCatch/CandyCatch.unity
@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Minigames/Jemie/CandyCatch/J_GameOver.unity
     guid: 56afe48875d75a3468d136161453478a
   - enabled: 1
-    path: Assets/Houses/RoomsPlaceholder/Scenes/T_House.unity
+    path: Assets/Houses/Rooms/Scenes/T_House.unity
     guid: da44437740314cd4fa293d46f0186975
   - enabled: 1
     path: Assets/Minigames/Tamara/MagicPractice/MagicPractice.unity

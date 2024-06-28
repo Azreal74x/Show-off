@@ -25,7 +25,7 @@ public class Raycasting : MonoBehaviour {
       RaycastHit hit;
       Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
       if (Physics.Raycast(ray, out hit, rayLenght, layerMask)) {
-        Debug.Log("clicked " + hit.collider.gameObject.name);
+        //Debug.Log("clicked " + hit.collider.gameObject.name);
 
 
         if (hit.collider.gameObject.name == F_house) {
